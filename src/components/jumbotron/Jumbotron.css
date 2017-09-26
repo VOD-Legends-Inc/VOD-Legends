@@ -1,0 +1,19 @@
+/* JUMBOTRON & HEADER SECTION */
+.jumbotron{
+	width: 100%;
+	padding-top: 16px;
+	margin-bottom: 0px;
+}
+
+.container-fluid{
+	padding: 0;
+}
+
+.brand-name img{
+	height: 100px;
+}
+
+.navbar{
+	background-color: transparent;
+	border: none;
+}
