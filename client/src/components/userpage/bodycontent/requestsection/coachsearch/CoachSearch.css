@@ -1,0 +1,31 @@
+.coachFilter{
+	float: left;
+	margin: 10px;
+	margin-bottom: 20px;
+	background-color: lightblue;
+	border: solid 1px lightgrey;
+}
+
+.tableHeader{
+	width: 10%;
+	float: left;
+	border: solid 1px lightgrey;
+	border-left: none;
+	padding-left: 5px;
+}
+
+.tableHeader:first-child{
+	border-left: solid 1px lightgrey;
+}
+
+.rowOne{
+	width: 10%;
+	float: left;
+	border: solid 1px lightgrey;
+	border-left: none;
+	padding-left: 5px;
+}
+
+.rowOne:first-child{
+	border-left: solid 1px lightgrey;
+}
