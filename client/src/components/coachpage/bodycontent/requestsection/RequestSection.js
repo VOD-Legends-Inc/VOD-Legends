@@ -1,4 +1,5 @@
 import React from "react"; 
+<<<<<<< HEAD
 import "./RequestSection.css";
 import RequestInbox from "./requestinbox/RequestInbox"
 
@@ -33,8 +34,21 @@ const RequestSection = () => (
 		</form>
 
 	</div>
+=======
+import "./InboxSection.css";
+import InboxSearch from "./inboxsearch/InboxSearch"
+>>>>>>> 853b0f244fa5b2df2a570fd21c6f18f7af3e1bee
 
+const InboxSection = () => (
+	<div id="inboxSection">
+		<h3 className="text-center">Pending VOD review Requests</h3>
+		<h4><u>Select a VOD and start review</u></h4>
+		
+		<InboxSearch />
+		
 
+		
+	</div>
 )
 
-export default RequestSection;
+export default InboxSection;

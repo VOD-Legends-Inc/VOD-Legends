@@ -1,7 +1,7 @@
 import React from "react"; 
 import "./BodyContent.css";
 import ProfileSection from "./profilesection/ProfileSection"
-import RequestSection from "./requestsection/RequestSection"
+import InboxSection from "./requestsection/InboxSection"
 import StudentsSection from "./studentssection/StudentsSection"
 
 const BodyContent = () => (
@@ -11,7 +11,7 @@ const BodyContent = () => (
 	<div className="tab-content">
 
 		<div id="coachRequest" className="tab-pane fade in active">
-			<RequestSection />
+			<InboxSection />
 		</div>
 
 		<div id="coachStudents" className="tab-pane fade">
