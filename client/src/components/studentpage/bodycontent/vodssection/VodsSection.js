@@ -5,7 +5,7 @@ import VodTable from "./vodtable/VodTable"
 const VodsSection = () => (
 	<div id="VodsSection">
 		<h3 className="text-center">Your VOD Reviews</h3>
-		<VodTable /><br/><br/><br/><br/><br/>
+		<VodTable /><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
 
 		<h4 className="text-center"><u>Zyra Game against a Sona - Sept. 8, 2017</u></h4>
 
@@ -34,7 +34,7 @@ const VodsSection = () => (
 
 		      <label className="control-label" for="timestamp">Time Stamp:</label>
 		      <div>
-		        <input type="text" className="form-control" id="vodtitle" name="vodtitle" />
+		        <input type="text" className="form-control" id="timestamp" name="vodtitle" />
 		      </div>
 		   
 		      <label className="control-label" for="noteforcoach">Message from your Coach:</label>

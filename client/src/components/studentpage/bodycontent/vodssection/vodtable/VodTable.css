@@ -5,3 +5,7 @@
 .coach{
 	width: 20%;
 }
+
+.tableRow{
+	background-color: blue !important;
+}
