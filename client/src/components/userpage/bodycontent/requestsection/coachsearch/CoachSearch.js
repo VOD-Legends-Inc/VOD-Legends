@@ -68,11 +68,11 @@ const CoachSearch = () => (
 		<div id="coachTable">
 			<div id="tableHeaders">
 				<div className="tableHeader">Coach</div>
-				<div className="tableHeader">Coach</div>
-				<div className="tableHeader">Coach</div>
-				<div className="tableHeader">Coach</div>
-				<div className="tableHeader">Coach</div>
-				<div className="tableHeader">Coach</div>
+				<div className="tableHeader">Role</div>
+				<div className="tableHeader">Bio</div>
+				<div className="tableHeader">ELO</div>
+				<div className="tableHeader">Language</div>
+				<div className="tableHeader">Rating</div>
 			</div>
 			<br/><br/>
 			<div id="tableRow">

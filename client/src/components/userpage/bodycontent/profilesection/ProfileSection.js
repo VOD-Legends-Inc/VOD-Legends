@@ -3,6 +3,7 @@ import "./ProfileSection.css";
 
 const ProfileSection = () => (
 	<div id="profileSection">
+		
 	</div>
 
 )

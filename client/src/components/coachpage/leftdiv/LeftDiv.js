@@ -9,7 +9,7 @@ const LeftDiv = () => (
   <img id="profilePic" className="center-block" src="./images/empty_profile.png" />
   <br/>
   <ul className="nav nav-pills nav-stacked">
-    <li className="active"><a data-toggle="pill" href="#coachRequest">VOD Request Inbox</a></li>
+      <li className="active"><a data-toggle="pill" href="#coachRequest">VOD Request Inbox</a></li>
       <li><a data-toggle="pill" href="#coachStudents">Your Students</a></li>
       <li><a data-toggle="pill" href="#coachProfile">Your Profile</a></li>
   </ul>
