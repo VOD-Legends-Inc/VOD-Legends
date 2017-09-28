@@ -41,7 +41,7 @@ const CoachSearch = () => (
 			</form>
 
 			<form id="languageFilter" className="coachFilter">
-			  <label for="leanguage">Language</label><br/>
+			  <label for="language">Language</label><br/>
 			  <select name="language">
 			    <option value="all">Any Language</option>
 			    <option value="en">English</option>
@@ -68,21 +68,80 @@ const CoachSearch = () => (
 		<div id="coachTable">
 			<div id="tableHeaders">
 				<div className="tableHeader">Coach</div>
-				<div className="tableHeader">Coach</div>
-				<div className="tableHeader">Coach</div>
-				<div className="tableHeader">Coach</div>
-				<div className="tableHeader">Coach</div>
-				<div className="tableHeader">Coach</div>
+				<div className="tableHeader">Role</div>
+				<div className="tableHeader bio">Bio</div>
+				<div className="tableHeader">ELO</div>
+				<div className="tableHeader">Language</div>
+				<div className="tableHeader">Rating</div>
+				<div className="tableHeader">Profile</div>
 			</div>
-			<br/><br/>
 			<div id="tableRow">
-				<div className="rowOne">Coach</div>
-				<div className="rowOne">Coach</div>
-				<div className="rowOne">Coach</div>
-				<div className="rowOne">Coach</div>
-				<div className="rowOne">Coach</div>
-				<div className="rowOne">Coach</div>
+				<div className="rowOne">Coach Name</div>
+				<div className="rowOne">Mid</div>
+				<div className="rowOne bio">LoL coach with four years experience</div>
+				<div className="rowOne">Diamond II</div>
+				<div className="rowOne">English</div>
+				<div className="rowOne">9.2</div>
+				<div className="rowOne">
+					<a href="">View Profile</a>
+				</div>
 			</div>
+			<div id="tableRow">
+				<div className="rowTwo">Coach Name</div>
+				<div className="rowTwo">Mid</div>
+				<div className="rowTwo bio">LoL coach with four years experience</div>
+				<div className="rowTwo">Diamond II</div>
+				<div className="rowTwo">English</div>
+				<div className="rowTwo">9.2</div>
+				<div className="rowTwo">
+					<a href="">View Profile</a>
+				</div>
+			</div>
+			<div id="tableRow">
+				<div className="rowThree">Coach Name</div>
+				<div className="rowThree">Mid</div>
+				<div className="rowThree bio">LoL coach with four years experience</div>
+				<div className="rowThree">Diamond II</div>
+				<div className="rowThree">English</div>
+				<div className="rowThree">9.2</div>
+				<div className="rowThree">
+					<a href="">View Profile</a>
+				</div>
+			</div>
+			<div id="tableRow">
+				<div className="rowFour">Coach Name</div>
+				<div className="rowFour">Mid</div>
+				<div className="rowFour bio">LoL coach with four years experience</div>
+				<div className="rowFour">Diamond II</div>
+				<div className="rowFour">English</div>
+				<div className="rowFour">9.2</div>
+				<div className="rowFour">
+					<a href="">View Profile</a>
+				</div>
+			</div>
+			<div id="tableRow">
+				<div className="rowFive">Coach Name</div>
+				<div className="rowFive">Mid</div>
+				<div className="rowFive bio">LoL coach with four years experience</div>
+				<div className="rowFive">Diamond II</div>
+				<div className="rowFive">English</div>
+				<div className="rowFive">9.2</div>
+				<div className="rowFive">
+					<a href="">View Profile</a>
+				</div>
+			</div>
+		</div>
+
+		<div id="pagination">
+			<ul className="pagination">
+			  <li><a id="prevCoach" href="#">Prev</a></li>
+			  <li><a href="#">1</a></li>
+			  <li><a href="#">2</a></li>
+			  <li><a href="#">3</a></li>
+			  <li><a href="#">4</a></li>
+			  <li><a href="#">5</a></li>
+			  <li><a id="nextCoach" href="#">Next</a></li>
+			</ul>
 		</div>
 
 
