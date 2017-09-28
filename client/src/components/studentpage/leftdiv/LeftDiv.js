@@ -10,10 +10,10 @@ const LeftDiv = () => (
   <p className="text-center">Credits: 0 <br /><a href='#'>Get More Credits</a></p>
 
   <ul className="nav nav-pills nav-stacked">
-    <li className="active"><a data-toggle="pill" href="#userRequest">Request a VOD Review</a></li>
-      <li><a data-toggle="pill" href="#userVods">Your VOD Reviews</a></li>
-      <li><a data-toggle="pill" href="#userProgress">Track your Progress</a></li>
-      <li><a data-toggle="pill" href="#userProfile">Your Profile</a></li>
+    <li className="active"><a data-toggle="pill" href="#studentRequest">Request a VOD Review</a></li>
+      <li><a data-toggle="pill" href="#studentVods">Your VOD Reviews</a></li>
+      <li><a data-toggle="pill" href="#studentProgress">Track your Progress</a></li>
+      <li><a data-toggle="pill" href="#studentProfile">Your Profile</a></li>
   </ul>
 
 </div> 

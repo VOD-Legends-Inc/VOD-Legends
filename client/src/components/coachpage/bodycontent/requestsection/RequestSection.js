@@ -19,7 +19,7 @@ const RequestSection = () => (
 		      
 		      <label className="control-label" for="vodtitle">VOD Title:</label>
 		      <div>
-		        <input type="text" className="form-control" id="vodtitle" placeholder="" name="vodtitle" />
+		        <input type="text" className="form-control" id="vodtitle" name="vodtitle" />
 		      </div>
 		      
 		      <label className="control-label" for="noteforcoach">Message for your Coach:</label>

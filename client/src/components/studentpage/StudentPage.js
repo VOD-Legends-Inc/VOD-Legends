@@ -4,7 +4,7 @@ import LeftDiv from "./leftdiv/LeftDiv";
 import BodyContent from "./bodycontent/BodyContent";
 import FooterDiv from "./footerdiv/FooterDiv"
 
-const UserPage = () => (
+const StudentPage = () => (
   <div className="container-fluid">
     <Navbar />
     <div className="row">
@@ -15,4 +15,4 @@ const UserPage = () => (
   </div>
 );
 
-export default UserPage;
+export default StudentPage;

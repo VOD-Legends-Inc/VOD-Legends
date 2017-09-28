@@ -11,19 +11,19 @@ const BodyContent = () => (
 
 	<div className="tab-content">
 
-		<div id="userRequest" className="tab-pane fade in active">
+		<div id="studentRequest" className="tab-pane fade in active">
 			<RequestSection />
 		</div>
 
-		<div id="userVods" className="tab-pane fade">
+		<div id="studentVods" className="tab-pane fade">
 			<VodsSection />
 		</div>
 
-		<div id="userProgress" className="tab-pane fade">
+		<div id="studentProgress" className="tab-pane fade">
 			<ProgressSection />
 		</div>
 
-		<div id="userProfile" className="tab-pane fade">
+		<div id="studentProfile" className="tab-pane fade">
 			<ProfileSection />
 		</div>
 
