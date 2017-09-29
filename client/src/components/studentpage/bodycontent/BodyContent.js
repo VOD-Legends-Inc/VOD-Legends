@@ -7,7 +7,7 @@ import VodsSection from "./vodssection/VodsSection"
 
 const BodyContent = () => (
 
-<div id="bodyContent" className="col-sm-9 col-md-9 col-lg-9">
+<div id="bodyContent" className="col-sm-8 col-md-8 col-lg-8">
 
 	<div className="tab-content">
 

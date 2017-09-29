@@ -1,7 +1,7 @@
 import React from "react"; 
 import "./BodyContent.css";
 import ProfileSection from "./profilesection/ProfileSection"
-import InboxSection from "./requestsection/InboxSection"
+import InboxSection from "./inboxsection/InboxSection"
 import StudentsSection from "./studentssection/StudentsSection"
 
 const BodyContent = () => (

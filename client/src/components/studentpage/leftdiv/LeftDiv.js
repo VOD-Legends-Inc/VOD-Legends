@@ -3,7 +3,11 @@ import "./LeftDiv.css";
 
 const LeftDiv = () => (
 
-<div id="leftDiv" className="col-sm-3 col-md-3 col-lg-3">
+<div id="leftDiv" className="col-sm-2 col-md-2 col-lg-2">
+
+  <button type="button" id="collapseButton" className="btn btn-default btn-xs pull-right">
+    <span className="glyphicon glyphicon-chevron-left"></span>
+  </button>	
 
   <h3 className="text-center">Username</h3>
   <img id="profilePic" className="center-block" src="./images/empty_profile.png" />

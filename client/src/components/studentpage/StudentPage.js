@@ -5,9 +5,10 @@ import BodyContent from "./bodycontent/BodyContent";
 import FooterDiv from "./footerdiv/FooterDiv"
 
 const StudentPage = () => (
-  <div className="container-fluid">
+  <div id="studentPage" className="container-fluid">
     <Navbar />
-    <div className="row">
+    <div id="studentPageRow" className="row">
+    	<div className="col-sm-1 col-md-1 col-lg-1"></div>
     	<LeftDiv />
     	<BodyContent />
     </div>

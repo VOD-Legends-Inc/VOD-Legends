@@ -1,12 +1,13 @@
 import React from "react"; 
-import "./InboxSearch.css";
+import "./CoachFilters.css";
 
-const InboxSearch = () => (
-	<div id="inboxSearch">		
-
-		<div id="inboxFilters">			
-			<form id="serverFilter" className="inboxFilter">
-			  <label for="server">Server</label><br/>
+const CoachFilters = () => (
+	
+		<div id="coachFilters" className="text-center">	
+			<h5 id="coachFilterLabel"><b>Coach Filters: </b></h5>
+			
+			<form id="serverFilter" className="coachFilter">
+			  <label for="server">Server: </label>
 			  <select name="server">
 			    <option value="all">All Servers</option>
 			    <option value="na">North America</option>
@@ -21,8 +22,8 @@ const InboxSearch = () => (
 			  </select>
 			</form>
 
-			<form id="roleFilter" className="inboxFilter">
-			  <label for="role">Role</label><br/>
+			<form id="roleFilter" className="coachFilter">
+			  <label for="role">Role: </label>
 			  <select name="role">
 			    <option value="all">All Roles</option>
 			    <option value="top">Top</option>
@@ -33,15 +34,15 @@ const InboxSearch = () => (
 			  </select>
 			</form>
 
-			<form id="championFilter" className="inboxFilter">
-			  <label for="champion">Champion</label><br/>
+			<form id="championFilter" className="coachFilter">
+			  <label for="champion">Champion</label>
 			  <select name="champion">
-			    <option value="all">All Champions</option>
+			    <option value="all">All Champions: </option>
 			  </select>
 			</form>
 
-			<form id="languageFilter" className="inboxFilter">
-			  <label for="leanguage">Language</label><br/>
+			<form id="languageFilter" className="coachFilter">
+			  <label for="language">Language: </label>
 			  <select name="language">
 			    <option value="all">Any Language</option>
 			    <option value="en">English</option>
@@ -63,33 +64,9 @@ const InboxSearch = () => (
 			</form>
 		</div>
 
-		<br/><br/><br/><br/>
-
-		<div id="inboxTable">
-			<div id="tableHeaders">
-				<div className="tableHeader">inbox</div>
-				<div className="tableHeader">inbox</div>
-				<div className="tableHeader">inbox</div>
-				<div className="tableHeader">inbox</div>
-				<div className="tableHeader">inbox</div>
-				<div className="tableHeader">inbox</div>
-			</div>
-			<br/><br/>
-			<div id="tableRow">
-				<div className="rowOne">inbox</div>
-				<div className="rowOne">inbox</div>
-				<div className="rowOne">inbox</div>
-				<div className="rowOne">inbox</div>
-				<div className="rowOne">inbox</div>
-				<div className="rowOne">inbox</div>
-			</div>
-		</div>
 
 
-	</div>
-
-
+		
 )
 
-export default InboxSearch;
-
+export default CoachFilters;

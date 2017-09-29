@@ -3,11 +3,13 @@ import "./VodsSection.css";
 import VodTable from "./vodtable/VodTable"
 
 const VodsSection = () => (
-	<div id="VodsSection">
+	<div id="vodsSection">
 		<h3 className="text-center">Your VOD Reviews</h3>
-		<VodTable /><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
 
-		<h4 className="text-center"><u>Zyra Game against a Sona - Sept. 8, 2017</u></h4>
+		<h4><u>List of VOD Reviews</u></h4>
+		<VodTable />
+
+		<h4 className="text-center"><u> VOD Selected: Zyra Game against a Sona - Sept. 8, 2017</u></h4>
 
 		<iframe className="center-block" width="90%" height="470" src="https://www.youtube.com/embed/8PMvZS8WAhs" frameborder="0" allowfullscreen></iframe>
 

@@ -1,11 +1,32 @@
+.tableHeader{
+	display: inline-block;
+	width: 15%;
+	border: solid 1px black;
+	border-left: none;
+	background-color: #303054;
+	color: white;
+	padding: 5px;
+}
+
+.tableHeader:first-child{
+	border-left: solid 1px black;
+}
+
+.tableBody{
+	display: inline-block;
+	width: 15%;
+	border: solid 1px black;
+	border-left: none;
+	padding: 5px;
+}
+
+.tableBody:first-child{
+	border-left: solid 1px black;
+}
+
+
 .vodTitle{
 	width: 30%;
 }
 
-.coach{
-	width: 20%;
-}
 
-.tableRow{
-	background-color: blue !important;
-}
