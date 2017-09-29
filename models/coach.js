@@ -15,6 +15,6 @@ const coachSchema = new Schema({
   password: { type: String, required: true }
 });
 
-const Coach = mongoose.model("Coach", coachSchema);
+const Coach = mongoose.model("Coaches", coachSchema);
 
 module.exports = Coach;
