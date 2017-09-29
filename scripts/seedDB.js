@@ -51,7 +51,7 @@ db.Coaches
     role: "adc",
     request: "Look at my video please",
     bio: "The most awesome rookie ever",
-    password: "rook123"
+    password: "rook1234"
   }
 ];
 console.log(studentSeed);
