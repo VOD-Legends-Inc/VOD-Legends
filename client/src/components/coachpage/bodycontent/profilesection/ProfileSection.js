@@ -5,7 +5,7 @@ const ProfileSection = () => (
 	<div id="profileSection">
 	////////////////
 	/////////////2//
-<div className="row">
+/*<div className="row">
 	<div className="container">
 
 		<div className="col-sm-3 col-md-3 col-lg-3">
@@ -13,7 +13,7 @@ const ProfileSection = () => (
 			<img id="profilePic" className="center-block" src="img/logom2.png">
 			<div id="editProfilePic">
 				<div className="text-center">Edit Profile Picture: </div> 
-				<input type="file" id="myFile">
+				<input type="file" id="myFile" />
 			</div>	
 			<br>
 			<a href="#" id="editProfile" className="center-block text-center">Edit Profile</a>	
@@ -54,12 +54,11 @@ const ProfileSection = () => (
 			<button type="button" id="profileButton" className="btn-primary btn center-block">Update Profile</button>
 			<br>			
 
-
 		</div> 
 
 	</div>
 
-</div>
+</div>*/
 	///////////2///
 
 // this section will control the edit profile functions
