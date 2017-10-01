@@ -1,3 +1,7 @@
 #bodyContent{
-	min-height: 600px;	
+	min-height: 500px;
+	border: 1px solid #d0cdcd;	
+	background-color: black;
+	margin-bottom: 20px;
+    box-shadow: 6px 6px 3px #888888;
 }

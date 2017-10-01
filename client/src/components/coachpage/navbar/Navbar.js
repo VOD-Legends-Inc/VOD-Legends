@@ -3,21 +3,32 @@ import "./Navbar.css";
 
 const Navbar = () => (
 
-<nav id="userNavbar" className="navbar navbar-default navigation">
-    <div id="headerContainer" className="container">
+<nav id="coachNavbar">
+    <div id="headerContainer" className="container-fluid">
   
-      <div className="col-sm-6 col-md-6 col-lg-6">
-          <div className='navbar-header brand-name'>
-            <img src="http://www.clker.com/cliparts/O/v/c/b/i/6/generic-logo.svg" />
-          </div>
+      <div id="leftNavbar">
+        <img src="./images/logo.png" />
       </div>
 
-        <div className="col-sm-6 col-md-6 col-lg-6">
-            <ul className="nav navbar-nav navbar-right">
-                <li><a href="#"><span className="glyphicon glyphicon-align-justify"></span></a></li>
-            </ul>
-        </div>
+      <div id="navLinks">
+        <ul className="nav nav-pills">
+          <li className="active"><a data-toggle="pill" href="#vodInbox">VOD Request Inbox</a></li>
+          <li><a data-toggle="pill" href="#coachVods">Your Students</a></li>
+          <li><a data-toggle="pill" href="#coachProfile">Your Profile</a></li>
+        </ul>  
+      </div>
 
+      <div id="rightNavbar">
+        <div className="dropdown">
+          <button className="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Username
+          <span className="caret"></span></button>
+          <ul className="dropdown-menu">
+            <li><a href="#">TBD #1</a></li>
+            <li><a href="#">TDD #2</a></li>
+            <li><a href="#">TBD #3</a></li>
+          </ul>
+        </div>
+      </div>
                        
     </div>
 

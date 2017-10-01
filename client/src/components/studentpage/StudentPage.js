@@ -1,16 +1,14 @@
 import React from "react";
+import "./StudentPage.css";
 import Navbar from "./navbar/Navbar";
-import LeftDiv from "./leftdiv/LeftDiv";
 import BodyContent from "./bodycontent/BodyContent";
-import FooterDiv from "./footerdiv/FooterDiv"
+import FooterDiv from "./footerdiv/FooterDiv";
+
 
 const StudentPage = () => (
-  <div className="container-fluid">
+  <div id="studentPage" className="container">
     <Navbar />
-    <div className="row">
-    	<LeftDiv />
-    	<BodyContent />
-    </div>
+    <BodyContent />
     <FooterDiv />
   </div>
 );
