@@ -1,0 +1,16 @@
+#coachVod h4{
+	border: none;
+}
+
+#coachVod p{
+	color: white;
+	margin-left: 10%;
+}
+
+#coachVod h5{
+	color: white;
+}
+
+#coachVod button{
+	margin-bottom: 10px;
+}

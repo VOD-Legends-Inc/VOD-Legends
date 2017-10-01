@@ -1,0 +1,46 @@
+#inbox h4{
+	color: white;
+	margin-left: 10%;
+	width: 80%;
+	border-bottom: solid white 1px;
+	margin-top: 20px;
+}
+
+#vodImages{
+	margin-left: 10%;
+}
+
+.vodImage{
+	width: 25%;
+	height: 205px;
+	background-image: url("./karma.png");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center; 
+	border: solid 1px blue;
+	display: inline-block;
+	margin-left: 3%;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.vodImage h5{
+	color: white;
+	background-color: rgba(33,34,33, .8);
+	padding: 5px;
+	margin: 0;
+}
+
+#inboxNavButtons{
+	margin-left: 10%;
+}
+
+
+#inboxNavButtons button{
+	margin-right: 10px;
+	margin-bottom: 20px;
+	background-color: grey;
+}
+
+
+
