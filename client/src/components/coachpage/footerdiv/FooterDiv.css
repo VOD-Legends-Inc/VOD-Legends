@@ -1,3 +1,45 @@
-.sectionDiv{
-	border-top: solid 1px lightgrey;
+#leftFooter img{
+	height: 50px;
+}
+
+#leftFooter{
+	width: 25%;
+	display: inline-block;
+}
+
+#coachFooter{
+	border-top: solid 1px white;
+	padding-top: 10px;
+	padding-bottom: 5px;
+}
+
+#footerLinks{
+	width: 50%;
+	display: inline-block;
+	text-align: center;
+}
+
+#footerLinks li{
+	display: inline-block;
+	border-left: solid 1px white;
+	padding-left: 5px; 
+	padding-right: 5px; 
+}
+
+#footerLinks li:first-child{
+	border-left: none;
+}
+
+#footerLinks li a{
+	color: white;
+}
+
+#copyright{
+	width: 25%;
+	display: inline-block;
+	text-align: right;
+}
+
+#copyright p{
+	color: white;
 }

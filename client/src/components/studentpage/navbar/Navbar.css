@@ -1,31 +1,51 @@
-#studentNavbar{
-	background-color:#252830;
-	margin-bottom: 0;
+#leftNavbar img{
+	height: 50px;
+}
+
+#leftNavbar{
+	width: 25%;
+	display: inline-block;
+}
+
+#navLinks{
+	width: 50%;
+	display: inline-block;
+	margin-top: 20px;
+}
+
+#navLinks ul{
 	width: 100%;
-	border-bottom: solid 1px black;
 }
 
-#studentPageRow{
-	background-color: #d5f0f9;
-	margin-top:20px;
-	margin-bottom:20px;
-
+#navLinks ul li{
+	border-left: solid 1px white;
+	padding-right: 3px;
+	padding-left: 3px;
+	font-size: 15px;
 }
 
-.brand-name{
-	border-left: solid 1px black;
-	border-right: solid 1px black;
-	margin-top: 5px;
-	margin-bottom: 5px;
+#navLinks ul li:first-child{
+	border-left: none;
+	padding-left: none;
 }
 
-#headerContainer {
-    padding: 0;
-    margin-left: 75px;
-    margin-right: 75px;
-    width: auto;
+#navLinks ul li a{
+	color: white;
+	padding-top: 2px;
+	padding-bottom: 2px;
 }
 
-#studentPage{
-	background-color: #d5f0f9;
+#rightNavbar{
+	width: 25%;
+	display: inline-block;
+	text-align: right;
+}
+
+.btn .caret{
+	margin-left: 5px;
+}
+
+.dropdown button{
+	background-color: transparent;
+	border: none;
 }

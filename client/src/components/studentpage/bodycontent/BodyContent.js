@@ -1,30 +1,30 @@
 import React from "react"; 
 import "./BodyContent.css";
-import ProfileSection from "./profilesection/ProfileSection"
-import RequestSection from "./requestsection/RequestSection"
-import ProgressSection from "./progresssection/ProgressSection"
-import VodsSection from "./vodssection/VodsSection"
+import VodRequest from "./vodrequest/VodRequest";
+import StudentVods from "./studentvods/StudentVods";
+import StudentProgress from "./studentprogress/StudentProgress";
+import StudentProfile from "./studentprofile/StudentProfile";
 
 const BodyContent = () => (
 
-<div id="bodyContent" className="col-sm-8 col-md-8 col-lg-8">
+<div id="bodyContent">
 
 	<div className="tab-content">
 
-		<div id="studentRequest" className="tab-pane fade in active">
-			<RequestSection />
+		<div id="vodRequest" className="tab-pane fade in active">
+			<VodRequest />
 		</div>
 
 		<div id="studentVods" className="tab-pane fade">
-			<VodsSection />
+			<StudentVods />
 		</div>
 
 		<div id="studentProgress" className="tab-pane fade">
-			<ProgressSection />
+			<StudentProgress />
 		</div>
 
 		<div id="studentProfile" className="tab-pane fade">
-			<ProfileSection />
+			<StudentProfile />
 		</div>
 
 	</div>

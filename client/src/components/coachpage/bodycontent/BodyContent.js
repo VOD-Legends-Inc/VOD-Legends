@@ -1,25 +1,25 @@
 import React from "react"; 
 import "./BodyContent.css";
-import ProfileSection from "./profilesection/ProfileSection"
-import InboxSection from "./inboxsection/InboxSection"
-import StudentsSection from "./studentssection/StudentsSection"
+import VodInbox from "./vodinbox/VodInbox";
+import CoachVods from "./coachvods/CoachVods";
+import CoachProfile from "./coachprofile/CoachProfile";
 
 const BodyContent = () => (
 
-<div id="bodyContent" className="col-sm-9 col-md-9 col-lg-9">
+<div id="bodyContent">
 
 	<div className="tab-content">
 
-		<div id="coachRequest" className="tab-pane fade in active">
-			<InboxSection />
+		<div id="vodInbox" className="tab-pane fade in active">
+			<VodInbox />
 		</div>
 
-		<div id="coachStudents" className="tab-pane fade">
-			<StudentsSection />
+		<div id="coachVods" className="tab-pane fade">
+			<CoachVods />
 		</div>
 
 		<div id="coachProfile" className="tab-pane fade">
-			<ProfileSection />
+			<CoachProfile />
 		</div>
 
 	</div>
