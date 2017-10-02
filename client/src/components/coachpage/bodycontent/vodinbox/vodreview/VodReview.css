@@ -1,0 +1,55 @@
+#vodReview h4{
+	color: white;
+}
+
+#vodReview h5{
+	color: white;
+}
+
+#addCommentButtons{
+	text-align: center;
+}
+
+#addCommentButtons button{
+	margin: 15px;
+	border-color: white;
+	background-color: #196019;
+}
+
+#commentButtons{
+	text-align: center;
+}
+
+#commentButtons button{
+	margin: 5px;
+	border-color: white;
+}
+
+#vodReview p{
+	margin-left: 10%;
+	color: white;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+#coachingComment{
+	width: 80%;
+	margin-left: 10%;
+	margin-bottom: 20px;
+	border: solid 1px #6969d6;
+}
+
+#inboxSubmitButtons{
+	text-align: center;
+}
+
+#inboxSubmitButtons button{
+	margin: 15px;
+	border-color: white;
+	background-color: grey;
+	margin-top: 0;
+}
+
+#vodReview{
+	/* display: none; */
+}

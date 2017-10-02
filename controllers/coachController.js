@@ -1,7 +1,7 @@
 const db = require("../models");
 const mongoose = require("mongoose");
 
-// Defining methods for the coachController
+///------------Defining methods for the coachController----------------------///
 module.exports = {
   findAll: function(req, res) {
     db.Coaches
