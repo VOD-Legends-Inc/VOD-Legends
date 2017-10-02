@@ -61,51 +61,5 @@ const ProfileSection = () => (
 
 )
 
-//This section holds the edit profile functions
-$("#editProfile").on("click", function(){
-	$(".profileText").prop("disabled", false);
-  	$("#editProfilePic").css("display", "block");
-});
-
-$("#profileButton").on("click", function(){
-	$(".profileText").prop("disabled", true);
-  	$("#editProfilePic").css("display", "none");
-});
-
-//This section will hold the update profile button functionality
-$("#profileButton").on("click", function(){
-  updateProfileData();
-})
-
-//updateProfileData Function
-function updateProfileData(){
-    
-    var firstName = $("#firstName").val().trim();
-    var lastName = $("#lastName").val().trim();
-    var userName = $("#userName").val().trim();
-    var email = $("#email").val().trim();
-    var bio = $("#bio").val().trim();
-    var location = $("#location").val().trim();
-    
-    var userData = {
-      id: userID,
-      firstName: firstName,
-      lastName: lastName,
-      userName : userName,
-      email: email,
-      bio: bio,
-      location: location,
-    };
-  
-    $.ajax({
-      method: "PUT",
-      url: "/api/user",
-      data: userData,
-    })
-    .done(function() {
-      console.log("User data updated")
-    });
-  
-}
 
 export default ProfileSection;
