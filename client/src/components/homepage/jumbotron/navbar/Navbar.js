@@ -1,146 +1,188 @@
-import React from "react";
+import React, { Component } from "react";
 
-const Navbar = () => (
+class Navbar extends Component {
+    state = {
+        signupModalVisible: false,
+        loginModalVisible: false
+    };
 
-<nav className="navbar navbar-default navigation">
-    <div id="headerContainer" className="container">
-  
-      <div className="col-sm-6 col-md-6 col-lg-6">
-          <div className='navbar-header brand-name'>
-            <img src="http://www.clker.com/cliparts/O/v/c/b/i/6/generic-logo.svg" />
-          </div>
-      </div>
+    signupClick = event => {
+        alert("this worked");
+        this.setState({signupModalVisible: true});
+    }
 
-        <div className="col-sm-6 col-md-6 col-lg-6">
-            <ul className="nav navbar-nav navbar-right">
-  
-                <li>
+    signupCancel = event => {
+        alert("this worked");
+        this.setState({signupModalVisible: false});
+    }
 
-                    <button id="signupModalButton">Sign Up</button>
 
-                    <div id="signupModal" className="modal">
+    loginClick = event => {
+        alert("this worked");
+        this.setState({loginModalVisible: true});
+    }
 
-                        <form className="modal-content animate">
+    loginCancel = event => {
+        alert("this worked");
+        this.setState({loginModalVisible: false});
+    }
 
-                            <span id="closeSignupModal" className="close">×</span>
 
-                            <div id="modalContainer" className="container">
+    render() {
+        return (
+            <nav className="navbar navbar-default navigation">
+                <div id="headerContainer" className="container">
+              
+                  <div className="col-sm-6 col-md-6 col-lg-6">
+                      <div className='navbar-header brand-name'>
+                        <img src="http://www.clker.com/cliparts/O/v/c/b/i/6/generic-logo.svg" />
+                      </div>
+                  </div>
 
-                                <h3 className="modalTitle center-block">MyStorya Sign Up</h3>
+                    <div className="col-sm-6 col-md-6 col-lg-6">
+                        <ul className="nav navbar-nav navbar-right">
+              
+                            <li>
 
-                                <div className="row">
-
-                                    <div className="col-sm-6 col-md-6 col-lg-6">
-                                        <label><b>First Name</b></label><br/>
-                                        <input id="firstNameInput" type="text" placeholder="Enter First Name" required/>
-                                    </div>
-
-                                    <div className="col-sm-6 col-md-6 col-lg-6">
-                                        <label><b>Last Name</b></label><br/>
-                                        <input id="lastNameInput" type="text" placeholder="Enter Last Name" required />
-                                    </div>
-
-                                </div> 
-
-                                <div className="row">
-                                    <div className="col-sm-12 col-md-12 col-lg-12">
-                                        <label><b>Username</b></label><br/>
-                                        <input type="text" placeholder="Enter Username" id="userNameInput" name="username" required />
-                                    </div>
-                                </div>
-
-                                <div className="row">
-                                    <div className="col-sm-12 col-md-12 col-lg-12">
-                                        <label><b>Email</b></label><br/>
-                                        <input type="text" placeholder="Enter Email" id="emailInput" name="email" required />
-                                    </div>
-                                </div>
-
-                                <div className="row">
-                                    <div className="col-sm-12 col-md-12 col-lg-12">
-                                        <label><b>Password</b></label><br/>
-                                        <input type="password" placeholder="Enter Password" id="passwordInput" name="psw" required />
-                                    </div>
-                                </div>
-
-                                <div className="row">
-                                    <div className="col-sm-12 col-md-12 col-lg-12">
-                                        <label><b>Repeat Password</b></label><br/>
-                                        <input type="password" placeholder="Repeat Password" id="repeatInput" name="psw-repeat" required />
-                                    </div>
-                                </div>                    
+                                <button id="signupModalButton" onClick={this.signupClick}>Sign Up</button>
                                 
-                                <p>By creating an account you agree to our <a href="#">Terms & Privacy Policies</a>.</p>
+                                {
+                                    this.state.signupModalVisible
+                                    ?
+                                    <div id="signupModal">
 
-                                <div className="modalButtons center-block">
-                                    
-                                    <button type="submit" id="submitSignupButton" className="pull-left" href="./profile">Sign Up</button>
+                                        <form className="modal-content animate">
 
-                                    <button type="button" id="cancelSignupButton" className="pull-right">Cancel</button>
+                                            <span id="closeSignupModal" className="close" onClick={this.signupCancel}>×</span>
 
-                                </div>
+                                            <div id="modalContainer" className="container">
 
-                            </div>
+                                                <h3 className="modalTitle center-block">MyStorya Sign Up</h3>
 
-                        </form>
+                                                <div className="row">
 
-                    </div>
+                                                    <div className="col-sm-6 col-md-6 col-lg-6">
+                                                        <label><b>First Name</b></label><br/>
+                                                        <input id="firstNameInput" type="text" placeholder="Enter First Name" required/>
+                                                    </div>
 
-                </li>
-                
-                <li>
+                                                    <div className="col-sm-6 col-md-6 col-lg-6">
+                                                        <label><b>Last Name</b></label><br/>
+                                                        <input id="lastNameInput" type="text" placeholder="Enter Last Name" required />
+                                                    </div>
 
-                    <button id="loginModalButton">Login</button>
+                                                </div> 
 
-                    <div id="loginModal" className="modal">
-                        
-                        <form className="modal-content animate">
+                                                <div className="row">
+                                                    <div className="col-sm-12 col-md-12 col-lg-12">
+                                                        <label><b>Username</b></label><br/>
+                                                        <input type="text" placeholder="Enter Username" id="userNameInput" name="username" required />
+                                                    </div>
+                                                </div>
 
-                            <span id="closeLoginModal" className="close">×</span>
+                                                <div className="row">
+                                                    <div className="col-sm-12 col-md-12 col-lg-12">
+                                                        <label><b>Email</b></label><br/>
+                                                        <input type="text" placeholder="Enter Email" id="emailInput" name="email" required />
+                                                    </div>
+                                                </div>
 
-                            <div id="modalContainer" className="container">
+                                                <div className="row">
+                                                    <div className="col-sm-12 col-md-12 col-lg-12">
+                                                        <label><b>Password</b></label><br/>
+                                                        <input type="password" placeholder="Enter Password" id="passwordInput" name="psw" required />
+                                                    </div>
+                                                </div>
 
-                                <h3 className="modalTitle center-block">MyStorya Login</h3>
-                                
-                                <div className="row">
-                                    <div className="col-sm-12 col-md-12 col-lg-12">
-                                        <label><b>Username</b></label>
-                                        <input type="text" placeholder="Enter Username" id="userNameLogin" name="username" required />
+                                                <div className="row">
+                                                    <div className="col-sm-12 col-md-12 col-lg-12">
+                                                        <label><b>Repeat Password</b></label><br/>
+                                                        <input type="password" placeholder="Repeat Password" id="repeatInput" name="psw-repeat" required />
+                                                    </div>
+                                                </div>                    
+                                                
+                                                <p>By creating an account you agree to our <a href="#">Terms & Privacy Policies</a>.</p>
+
+                                                <div className="modalButtons center-block">
+                                                    
+                                                    <button type="submit" id="submitSignupButton" className="pull-left" href="./profile">Sign Up</button>
+
+                                                    <button type="button" id="cancelSignupButton" className="pull-right" onClick={this.signupCancel}>Cancel</button>
+
+                                                </div>
+
+                                            </div>
+
+                                        </form>
+
                                     </div>
-                                </div>
-                                
-                                <div className="row">
-                                    <div className="col-sm-12 col-md-12 col-lg-12">
-                                        <label><b>Password</b></label><br/>
-                                        <input type="password" placeholder="Enter Password" id="passwordLogin" name="psw" required />
-                                    </div>
-                                </div>
+                                    : null
+                                }
 
-                                <div className="modalButtons center-block">
 
-                                    <button type="submit" id="submitLoginButton" className="pull-left">Login</button>
-                                    
-                                    <button type="button" id="cancelLoginButton" className="pull-right">Cancel</button>
-
-                                </div>
-                           
-                                <span id="forgotPassword">Forgot Your <a href="#">Password?</a></span>
+                            </li>
                             
-                            </div>
+                            <li>
 
-                        </form>
+                                <button id="loginModalButton" onClick={this.loginClick}>Login</button>
 
+                                {
+                                    this.state.loginModalVisible
+                                    ?
+                                    <div id="loginModal">
+                                        
+                                        <form className="modal-content animate">
+
+                                            <span id="closeLoginModal" className="close" onClick={this.loginCancel}>×</span>
+
+                                            <div id="modalContainer" className="container">
+
+                                                <h3 className="modalTitle center-block">MyStorya Login</h3>
+                                                
+                                                <div className="row">
+                                                    <div className="col-sm-12 col-md-12 col-lg-12">
+                                                        <label><b>Username</b></label>
+                                                        <input type="text" placeholder="Enter Username" id="userNameLogin" name="username" required />
+                                                    </div>
+                                                </div>
+                                                
+                                                <div className="row">
+                                                    <div className="col-sm-12 col-md-12 col-lg-12">
+                                                        <label><b>Password</b></label><br/>
+                                                        <input type="password" placeholder="Enter Password" id="passwordLogin" name="psw" required />
+                                                    </div>
+                                                </div>
+
+                                                <div className="modalButtons center-block">
+
+                                                    <button type="submit" id="submitLoginButton" className="pull-left">Login</button>
+                                                    
+                                                    <button type="button" id="cancelLoginButton" className="pull-right" onClick={this.loginCancel}>Cancel</button>
+
+                                                </div>
+                                           
+                                                <span id="forgotPassword">Forgot Your <a href="#">Password?</a></span>
+                                            
+                                            </div>
+
+                                        </form>
+
+                                    </div>
+                                    : null
+                                }
+
+                            </li>
+
+                        </ul>
                     </div>
 
-                </li>
+                                   
+                </div>
 
-            </ul>
-        </div>
+            </nav>
+        )
+    }
 
-                       
-    </div>
-
-</nav>
-);
+}
 
 export default Navbar;
