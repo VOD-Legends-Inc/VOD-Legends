@@ -55,9 +55,9 @@ db.Coaches
   }
 ];
 console.log(studentSeed);
-db.Student
+db.Students
   .remove({})
-  .then(() => db.Student.collection.insertMany(studentSeed))
+  .then(() => db.Students.collection.insertMany(studentSeed))
   .then(data => {
     console.log(data.insertedIds.length + " records inserted!");
     process.exit(0);
@@ -84,9 +84,9 @@ db.Student
     }
 ];
 console.log(requestSeed);
-db.Request
+db.Requests
   .remove({})
-  .then(() => db.Request.collection.insertMany(requestSeed))
+  .then(() => db.Requests.collection.insertMany(requestSeed))
   .then(data => {
     console.log(data.insertedIds.length + " records inserted!");
     process.exit(0);

@@ -14,7 +14,7 @@ const StudentVodImages = () => (
 			<h5 className="text-center">Character: Zyra</h5>
 			<h5 className="text-center">Role: Support</h5>
 			<br/>
-			<h5 className="text-center">From Student: Azianpinoy</h5>
+			<h5 className="text-center">From Coach: Azianpinoy</h5>
 		</div>
 	</div>
 
@@ -27,7 +27,7 @@ const StudentVodImages = () => (
 			<h5 className="text-center">Character: Zyra</h5>
 			<h5 className="text-center">Role: Support</h5>
 			<br/>
-			<h5 className="text-center">From Student: Azianpinoy</h5>
+			<h5 className="text-center">From Coach: Azianpinoy</h5>
 		</div>
 	</div>
 
@@ -40,7 +40,7 @@ const StudentVodImages = () => (
 			<h5 className="text-center">Character: Zyra</h5>
 			<h5 className="text-center">Role: Support</h5>
 			<br/>
-			<h5 className="text-center">From Student: Azianpinoy</h5>
+			<h5 className="text-center">From Coach: Azianpinoy</h5>
 		</div>
 	</div>
 
