@@ -1,5 +1,6 @@
 import React from "react"; 
 import "./VodReview.css";
+import VodInbox from "../VodInbox";
 
 const VodReview = () => (
 
@@ -33,12 +34,6 @@ const VodReview = () => (
 
 	<p>Your Coaching Comment:</p>
     <textarea id="coachingComment" rows="4"  />
-
-    <div id="inboxSubmitButtons">
-		<button type="button" className="btn btn-success">Send VOD Review</button>
-		<button type="button" className="btn btn-success">Return to Inbox</button>
-	</div>
-
 
 </div>
 
