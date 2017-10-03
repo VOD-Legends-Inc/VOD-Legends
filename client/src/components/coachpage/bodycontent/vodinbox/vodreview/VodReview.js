@@ -1,6 +1,5 @@
 import React, { Component } from "react"; 
 import "./VodReview.css";
-import VodInbox from "../VodInbox";
 
 class VodReview extends Component {
 	state = {
@@ -14,19 +13,19 @@ class VodReview extends Component {
 	};
 
 	addComment = event => {
-		{
-			this.state.commentNumber != this.state.currentComment
-			?
-			this.setState({
-				commentNumber: this.state.currentComment + 1,
-				currentComment: this.state.currentComment + 1,
-			})
-			:
-			this.setState({
-				commentNumber: this.state.commentNumber + 1,
-				currentComment: this.state.currentComment + 1,
-			});
-		}
+		
+		this.state.commentNumber !== this.state.currentComment
+		?
+		this.setState({
+			commentNumber: this.state.currentComment + 1,
+			currentComment: this.state.currentComment + 1,
+		})
+		:
+		this.setState({
+			commentNumber: this.state.commentNumber + 1,
+			currentComment: this.state.currentComment + 1,
+		});
+		
 	}
 
 	pauseVideo = event => {
@@ -100,7 +99,7 @@ class VodReview extends Component {
 						
 						<p id="coachCommentNumber">Comment Number:</p>
 						<input type="text" ref="coachCommentNumber" onChange={this.handleInputChange} name="commentNumber" value={
-							this.state.commentNumber == 0
+							this.state.commentNumber === 0
 							?
 							"No comment selected"
 							:
@@ -109,7 +108,7 @@ class VodReview extends Component {
 						
 						<p id="coachTimeStamp">Timestamp:</p>
 						<input type="text" ref="coachTimeStamp" onChange={this.handleInputChange} name="timeStamp" value={
-							this.state.commentNumber == 0
+							this.state.commentNumber === 0
 							?
 							"No comment selected"
 							:
