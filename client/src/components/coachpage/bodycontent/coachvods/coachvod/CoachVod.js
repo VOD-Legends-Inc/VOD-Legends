@@ -33,9 +33,6 @@ const CoachVod = () => (
 	<p>Your Coaching Comment:</p>
     <textarea id="coachingComment" rows="4"  />
 
-    
-	<button type="button" className="btn btn-success center-block">Return to Your Students</button>
-
 </div>
 
 

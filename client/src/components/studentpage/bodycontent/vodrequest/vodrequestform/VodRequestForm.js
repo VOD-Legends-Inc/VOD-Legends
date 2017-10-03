@@ -39,7 +39,6 @@ const VodRequestForm = () => (
 	      <div>
 	        <textarea rows="4" name="noteforcoach" form="vodRequest" />
 	      </div>
-	      <button id="vodRequestButton" className="center-block" type="submit" form="vodRequest" value="Submit">Send VOD Review Request</button>
 	    </div>
 	</form>    
 
