@@ -19,7 +19,7 @@ const coachSeed = [
     lolUserName: "sil3ntsnip3r",
     role: "adc",
     elo: "ELO Ranking",
-    server: "USA",
+    server: "Europe",
     mainChampion: "Sniper",
     language: "English",
     rating: "9/10",
