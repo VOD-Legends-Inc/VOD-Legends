@@ -7,7 +7,7 @@ const Navbar = () => (
     <div id="headerContainer" className="container-fluid">
   
       <div id="leftNavbar">
-        <img src="./images/logo.png" />
+        <a href="/student"><img src="./images/logo.png" /></a>
       </div>
 
       <div id="navLinks">

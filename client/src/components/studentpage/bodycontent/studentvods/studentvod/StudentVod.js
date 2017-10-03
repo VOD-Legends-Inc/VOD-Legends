@@ -35,9 +35,6 @@ const StudentVod = () => (
 	<p>Your Coach's Comment:</p>
     <textarea id="coachingComment" rows="4"  />
 
-    
-	<button type="button" className="btn btn-success center-block">Return to Your VODs</button>
-
 </div>
 
 

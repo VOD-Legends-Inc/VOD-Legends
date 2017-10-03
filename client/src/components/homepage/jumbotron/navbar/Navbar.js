@@ -1,9 +1,18 @@
 import React, { Component } from "react";
+import "./Navbar.css";
 
 class Navbar extends Component {
     state = {
         signupModalVisible: false,
-        loginModalVisible: false
+        loginModalVisible: false,
+        firstName: "",
+        lastName: "",
+        userName: "",
+        email: "",
+        password: "",
+        repeatPW: "",
+        loginPassword: "",
+        loginUsername: "",
     };
 
     signupClick = event => {
@@ -25,6 +34,13 @@ class Navbar extends Component {
     loginCancel = event => {
         alert("this worked");
         this.setState({loginModalVisible: false});
+    }
+
+    handleInputChange = event => {
+        const {name, value} = event.target;
+        this.setState({
+            [name]: value
+        });
     }
 
 
@@ -51,63 +67,47 @@ class Navbar extends Component {
                                     ?
                                     <div id="signupModal">
 
-                                        <form className="modal-content animate">
+                                        <form>
 
                                             <span id="closeSignupModal" className="close" onClick={this.signupCancel}>×</span>
 
-                                            <div id="modalContainer" className="container">
+                                            <div className="container">
 
-                                                <h3 className="modalTitle center-block">MyStorya Sign Up</h3>
+                                                <h3 className="center-block">vodLegends Sign Up</h3>
 
-                                                <div className="row">
+                                           
 
-                                                    <div className="col-sm-6 col-md-6 col-lg-6">
-                                                        <label><b>First Name</b></label><br/>
-                                                        <input id="firstNameInput" type="text" placeholder="Enter First Name" required/>
-                                                    </div>
-
-                                                    <div className="col-sm-6 col-md-6 col-lg-6">
-                                                        <label><b>Last Name</b></label><br/>
-                                                        <input id="lastNameInput" type="text" placeholder="Enter Last Name" required />
-                                                    </div>
-
-                                                </div> 
-
-                                                <div className="row">
-                                                    <div className="col-sm-12 col-md-12 col-lg-12">
-                                                        <label><b>Username</b></label><br/>
-                                                        <input type="text" placeholder="Enter Username" id="userNameInput" name="username" required />
-                                                    </div>
-                                                </div>
-
-                                                <div className="row">
-                                                    <div className="col-sm-12 col-md-12 col-lg-12">
-                                                        <label><b>Email</b></label><br/>
-                                                        <input type="text" placeholder="Enter Email" id="emailInput" name="email" required />
-                                                    </div>
-                                                </div>
-
-                                                <div className="row">
-                                                    <div className="col-sm-12 col-md-12 col-lg-12">
-                                                        <label><b>Password</b></label><br/>
-                                                        <input type="password" placeholder="Enter Password" id="passwordInput" name="psw" required />
-                                                    </div>
-                                                </div>
-
-                                                <div className="row">
-                                                    <div className="col-sm-12 col-md-12 col-lg-12">
-                                                        <label><b>Repeat Password</b></label><br/>
-                                                        <input type="password" placeholder="Repeat Password" id="repeatInput" name="psw-repeat" required />
-                                                    </div>
-                                                </div>                    
+                                                <label><b>First Name</b></label><br/>
+                                                <input type="text" value={this.state.firstName} onChange={this.handleInputChange} name="firstName" placeholder="Enter First Name" required/><br/>
                                                 
-                                                <p>By creating an account you agree to our <a href="#">Terms & Privacy Policies</a>.</p>
+                                                <label><b>Last Name</b></label><br/>
+                                                <input type="text" value={this.state.lastName} onChange={this.handleInputChange} name="lastName" placeholder="Enter Last Name" required /><br/>
+                                               
+                                       
 
-                                                <div className="modalButtons center-block">
+                                          
+                                                <label><b>Username</b></label><br/>
+                                                <input type="text" value={this.state.userName} onChange={this.handleInputChange} name="userName" placeholder="Enter Username" id="userNameInput" required /><br/>
+                                                
+                                          
+
+                                  
+                                                <label><b>Email</b></label><br/>
+                                                <input type="text" value={this.state.email} onChange={this.handleInputChange} name="email" placeholder="Enter Email" id="emailInput" required /><br/>
+                                          
+
+                                                <label><b>Password</b></label><br/>
+                                                <input type="password" value={this.state.password} onChange={this.handleInputChange} name="password" placeholder="Enter Password" id="passwordInput" required /><br/>
+                                          
+
+                                                <label><b>Repeat Password</b></label><br/>
+                                                <input type="password" value={this.state.repeatPW} onChange={this.handleInputChange} name="repeatPW" placeholder="Repeat Password" id="repeatInput" required /><br/>                     
+
+                                                <div className="center-block">
                                                     
-                                                    <button type="submit" id="submitSignupButton" className="pull-left" href="./profile">Sign Up</button>
+                                                    <button type="submit" >Sign Up</button>
 
-                                                    <button type="button" id="cancelSignupButton" className="pull-right" onClick={this.signupCancel}>Cancel</button>
+                                                    <button type="button" onClick={this.signupCancel}>Cancel</button>
 
                                                 </div>
 
@@ -131,37 +131,31 @@ class Navbar extends Component {
                                     ?
                                     <div id="loginModal">
                                         
-                                        <form className="modal-content animate">
+                                        <form>
 
                                             <span id="closeLoginModal" className="close" onClick={this.loginCancel}>×</span>
 
-                                            <div id="modalContainer" className="container">
+                                            <div className="container">
 
-                                                <h3 className="modalTitle center-block">MyStorya Login</h3>
+                                                <h3 className="mcenter-block">MyStorya Login</h3>
                                                 
-                                                <div className="row">
-                                                    <div className="col-sm-12 col-md-12 col-lg-12">
-                                                        <label><b>Username</b></label>
-                                                        <input type="text" placeholder="Enter Username" id="userNameLogin" name="username" required />
-                                                    </div>
-                                                </div>
                                                 
-                                                <div className="row">
-                                                    <div className="col-sm-12 col-md-12 col-lg-12">
+                                                        <label><b>Username</b></label><br/>
+                                                        <input type="text" value={this.state.loginUsername} onChange={this.handleInputChange} placeholder="Enter Username" id="userNameLogin" name="loginUsername" required /><br/>
+                                               
+                                                
+                                              
                                                         <label><b>Password</b></label><br/>
-                                                        <input type="password" placeholder="Enter Password" id="passwordLogin" name="psw" required />
-                                                    </div>
-                                                </div>
+                                                        <input type="password" value={this.state.loginPassword} onChange={this.handleInputChange} name="loginPassword"  placeholder="Enter Password" id="passwordLogin" required />
+                                                
 
-                                                <div className="modalButtons center-block">
+                                                <div className="center-block">
 
-                                                    <button type="submit" id="submitLoginButton" className="pull-left">Login</button>
+                                                    <button type="submit">Login</button>
                                                     
-                                                    <button type="button" id="cancelLoginButton" className="pull-right" onClick={this.loginCancel}>Cancel</button>
+                                                    <button type="button" onClick={this.loginCancel}>Cancel</button>
 
                                                 </div>
-                                           
-                                                <span id="forgotPassword">Forgot Your <a href="#">Password?</a></span>
                                             
                                             </div>
 

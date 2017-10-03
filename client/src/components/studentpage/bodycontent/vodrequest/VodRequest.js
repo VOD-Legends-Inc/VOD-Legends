@@ -1,26 +1,68 @@
-import React from "react"; 
+import React, { Component } from "react"; 
 import "./VodRequest.css";
 import Pagination from "./pagination/Pagination";
 import CoachFilters from "./coachfilters/CoachFilters";
-import CoachImages from "./coachimages/CoachImages";
+import CoachImage from "./coachimage/CoachImage";
 import VodRequestForm from "./vodrequestform/VodRequestForm";
 
-const VodRequest = () => (
+class VodRequest extends Component {
+	state = {
+		coachSearchVisible: true,
+		vodFormVisible: false
+	};
 
-<div id="vodRequest">
-	<h4>Coach Search:</h4>
-	<Pagination />
-	<CoachFilters />
+	coachImageClick = event => {
+		alert("this worked");
+		this.setState({vodFormVisible: true});
+		this.setState({coachSearchVisible: false});
+	};
 
-	<CoachImages />
-	<button type="button" className="btn btn-success center-block">Select Coach</button>
+	cancelButtonClick = event => {
+		alert("this worked");
+		this.setState({vodFormVisible: false});
+		this.setState({coachSearchVisible: true});
+	}
 
-	<VodRequestForm />
+    render() {
+        return (
+        	<div id="vodRequest">
 
+        		{
+        			this.state.coachSearchVisible
+        			?
+        			<div>
+						<h4>Coach Search:</h4>
+						<Pagination />
+						<CoachFilters />
 
+						<div id="coachImages">
+							<a href="#" onClick={this.coachImageClick}><CoachImage /></a>
+							<a href="#" onClick={this.coachImageClick}><CoachImage /></a>
+							<a href="#" onClick={this.coachImageClick}><CoachImage /></a>
+							<a href="#" onClick={this.coachImageClick}><CoachImage /></a>
+							<a href="#" onClick={this.coachImageClick}><CoachImage /></a>
+							<a href="#" onClick={this.coachImageClick}><CoachImage /></a>
+						</div>
+					</div>
+					: null
+				}
 
-</div>
+				{
+					this.state.vodFormVisible
+					?
+					<div>
+						<VodRequestForm />
+						<div id="requestFormButtons" className="center-block">
+							<button id="vodRequestButton" type="submit" form="vodRequest" value="Submit">Send VOD Review Request</button>
+							<button id="requestCancelButton" form="vodRequest" onClick={this.cancelButtonClick}>Cancel</button>
+						</div>
+					</div>
+					: null
+				}
+			</div>
+		)
+    }
 
-);
+}
 
 export default VodRequest;
