@@ -4,12 +4,27 @@ import Pagination from "./pagination/Pagination";
 import CoachFilters from "./coachfilters/CoachFilters";
 import CoachImage from "./coachimage/CoachImage";
 import VodRequestForm from "./vodrequestform/VodRequestForm";
+import API from "../../../../utils/coachAPI";
 
 class VodRequest extends Component {
 	state = {
 		coachSearchVisible: true,
 		vodFormVisible: false
 	};
+
+	componentDidMount() {
+		this.loadCoaches();
+	}
+
+	loadCoaches = () => {
+		API.getCoaches()
+			.then(res =>
+				console.log(res)
+			)
+			.catch(err => 
+				console.log(err)
+			);
+	}
 
 	coachImageClick = event => {
 		alert("this worked");
@@ -52,7 +67,7 @@ class VodRequest extends Component {
 					?
 					<div>
 						<VodRequestForm />
-						<div id="requestFormButtons" className="center-block">
+						<div id="requestFormButtons" className="text-center">
 							<button id="vodRequestButton" type="submit" form="vodRequest" value="Submit">Send VOD Review Request</button>
 							<button id="requestCancelButton" form="vodRequest" onClick={this.cancelButtonClick}>Cancel</button>
 						</div>
