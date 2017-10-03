@@ -3,18 +3,18 @@ import axios from "axios";
 export default {
   // Gets all students
   getStudent: function() {
-    return axios.get("/api/student");
+    return axios.get("/api/students");
   },
   // Gets the student with the given id
   getStudent: function(id) {
-    return axios.get("/api/student/" + id);
+    return axios.get("/api/students/" + id);
   },
   // Deletes the student with the given id
   deleteStudent: function(id) {
-    return axios.delete("/api/student/" + id);
+    return axios.delete("/api/students/" + id);
   },
   // Saves a student to the database
   saveStudent: function(studentData) {
-    return axios.post("/api/student", studentData);
+    return axios.post("/api/students", studentData);
   }
 };
