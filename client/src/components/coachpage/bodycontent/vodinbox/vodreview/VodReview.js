@@ -8,13 +8,25 @@ class VodReview extends Component {
 		currentComment: 0,
 		youtubeURL: "https://www.youtube.com/embed/8PMvZS8WAhs",
 		finalReportVisible: false,
+		timeStamp: "",
+		textArea: "",
+		coachingComments: [],
 	};
 
 	addComment = event => {
-		this.setState({
-			commentNumber: this.state.commentNumber + 1,
-			currentComment: this.state.currentComment + 1,
-		});
+		{
+			this.state.commentNumber != this.state.currentComment
+			?
+			this.setState({
+				commentNumber: this.state.currentComment + 1,
+				currentComment: this.state.currentComment + 1,
+			})
+			:
+			this.setState({
+				commentNumber: this.state.commentNumber + 1,
+				currentComment: this.state.currentComment + 1,
+			});
+		}
 	}
 
 	pauseVideo = event => {
@@ -29,22 +41,39 @@ class VodReview extends Component {
 
 	commentComplete = event => {
 		let newComment = {
-			commentNumber: this.refs.coachCommentNumber.value,
-			timeStamp: this.refs.coachTimeStamp.value,
-			textArea: this.refs.coachTextArea.value
+			commentNumber: this.state.commentNumber,
+			timeStamp: this.state.timeStamp,
+			textArea: this.state.textArea,
 		};
-		console.log(newComment);
+		this.state.coachingComments.push(newComment);
+		console.log(this.state.coachingComments);
 	}
+
+	handleInputChange = event => {
+        const {name, value} = event.target;
+        this.setState({
+            [name]: value
+        });
+    }
+
+    commentNumberClick = event => {
+    	let {value} = event.target;
+    	let commentToShow = this.state.coachingComments[value - 1];
+    	
+    	this.setState({
+    		commentNumber: commentToShow.commentNumber,
+    		timeStamp: commentToShow.timeStamp,
+    		textArea: commentToShow.textArea,
+    	});
+    }
 
 	render(){
 		const comments = [];
 
-		const coachingComments = [];
-
 		let url = this.state.youtubeURL;
 
-		for (var i = 1; i <= this.state.commentNumber; i++){
-			comments.push(<button type="button" className="btn btn-primary" value={i}>{i}</button>);
+		for (var i = 1; i <= this.state.currentComment; i++){
+			comments.push(<button type="button" className="btn btn-primary" ref="commentButton" onClick={this.commentNumberClick} key={i} value={i}>{i}</button>);
 		};
 
 		return(
@@ -54,7 +83,7 @@ class VodReview extends Component {
 
 				<h5 className="text-center">Zyra Game against Sona - September 8, 2017</h5>
 
-				<iframe ref="vidRef" className="center-block" width="80%" height="400" src={url} frameborder="0" onClick={this.pauseVideo} allowfullscreen></iframe>
+				<iframe ref="vidRef" className="center-block" width="80%" height="400" src={url} frameBorder="0" onClick={this.pauseVideo} allowFullScreen></iframe>
 	
 				{
 					!this.state.finalReportVisible
@@ -69,12 +98,26 @@ class VodReview extends Component {
 							{comments}
 						</div>
 						
-						<p id="coachCommentNumber">Comment Number: <span><u ref="coachCommentNumber"> #{this.state.currentComment}</u></span></p>
+						<p id="coachCommentNumber">Comment Number:</p>
+						<input type="text" ref="coachCommentNumber" onChange={this.handleInputChange} name="commentNumber" value={
+							this.state.commentNumber == 0
+							?
+							"No comment selected"
+							:
+							"Comment #" + this.state.commentNumber				
+						} />
 						
-						<p id="coachTimeStamp" ref="coachTimeStamp">Timestamp: <span><u> 2:51</u></span></p>
+						<p id="coachTimeStamp">Timestamp:</p>
+						<input type="text" ref="coachTimeStamp" onChange={this.handleInputChange} name="timeStamp" value={
+							this.state.commentNumber == 0
+							?
+							"No comment selected"
+							:
+							this.state.timeStamp
+						} />
 
 						<p>Your Coaching Comment:</p>
-					    <textarea id="coachingComment" rows="4" ref="coachTextArea" />
+					    <textarea id="coachingComment" name="textArea" onChange={this.handleInputChange} value={this.state.textArea} rows="4" ref="coachTextArea" />
 
 						<button type="button" id="commentComplete" onClick={this.commentComplete} className="btn btn-primary center-block">Comment Complete</button>
 					</div>
