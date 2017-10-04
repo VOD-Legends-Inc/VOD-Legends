@@ -10,6 +10,7 @@ class VodReview extends Component {
 		timeStamp: "",
 		textArea: "",
 		coachingComments: [],
+		finalButtonVisible: false,
 	};
 
 	addComment = event => {
@@ -34,7 +35,8 @@ class VodReview extends Component {
 
 	finalReport = event => {
 		this.setState({
-			finalReportVisible: true
+			finalReportVisible: true,
+			finalButtonVisible: true
 		});
 	}
 
@@ -63,7 +65,16 @@ class VodReview extends Component {
     		commentNumber: commentToShow.commentNumber,
     		timeStamp: commentToShow.timeStamp,
     		textArea: commentToShow.textArea,
+    		finalReportVisible: false,
+    		
     	});
+    }
+
+    finalReportClick = event => {
+    	this.setState({
+    		finalReportVisible: true,
+
+    	})
     }
 
 	render(){
@@ -75,6 +86,8 @@ class VodReview extends Component {
 			comments.push(<button type="button" className="btn btn-primary" ref="commentButton" onClick={this.commentNumberClick} key={i} value={i}>{i}</button>);
 		};
 
+
+
 		return(
 			<div id="vodReview">
 	
@@ -84,22 +97,28 @@ class VodReview extends Component {
 
 				<iframe ref="vidRef" className="center-block" width="80%" height="400" src={url} frameBorder="0" onClick={this.pauseVideo} title="video" allowFullScreen></iframe>
 	
+				<div id="addCommentButtons">
+					<button type="button" className="btn btn-success" onClick={this.addComment}>Add Comment</button>
+					<button type="button" className="btn btn-success" onClick={this.finalReport}>Add Final Report</button>
+				</div>
+				
+				<div id="coachCommentBackground">
+					<h5 className="text-center"><u>Your Coaching Comments</u></h5>
+					<div id="commentButtons">
+						{comments}
+						{
+							this.state.finalButtonVisible
+							?
+							<button type="button" className="btn btn-primary" ref="finalButton" onClick={this.finalReportClick} >Final Report</button>
+							: null					
+						}
+					</div>
+				</div>
+
 				{
 					!this.state.finalReportVisible
 					?
 					<div>
-						<div id="addCommentButtons">
-							<button type="button" className="btn btn-success" onClick={this.addComment}>Add Comment</button>
-							<button type="button" className="btn btn-success" onClick={this.finalReport}>Add Final Report</button>
-						</div>
-						
-						<div id="coachCommentBackground">
-							<h5 className="text-center"><u>Your Coaching Comments</u></h5>
-							<div id="commentButtons">
-								{comments}
-							</div>
-						</div>
-
 						<div id="coachVodForm">
 							<p id="coachCommentNumber">Comment Number:</p>
 							<input type="text" ref="coachCommentNumber" onChange={this.handleInputChange} name="commentNumber" value={
@@ -131,7 +150,7 @@ class VodReview extends Component {
 				{
 					this.state.finalReportVisible
 					?
-					<div>
+					<div id="finalReportDiv">
 						
 						<h5 className="text-center"><u>Final Report</u></h5>	
 						

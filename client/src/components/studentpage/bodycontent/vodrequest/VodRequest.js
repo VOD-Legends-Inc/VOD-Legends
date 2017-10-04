@@ -9,7 +9,8 @@ import CoachAPI from "../../../../utils/coachAPI";
 class VodRequest extends Component {
 	state = {
 		coachSearchVisible: true,
-		vodFormVisible: false
+		vodFormVisible: false,
+		coaches: []
 	};
 
 	loadCoaches = event => {
@@ -53,7 +54,7 @@ class VodRequest extends Component {
 							<a href="#" onClick={this.coachImageClick}><CoachImage /></a>
 							<a href="#" onClick={this.coachImageClick}><CoachImage /></a>
 							<a href="#" onClick={this.coachImageClick}><CoachImage /></a>
-							<a href="#" onClick={this.coachImageClick}><CoachImage /></a>
+							<a href="#" onClick={this.coachImageClick}><CoachImage /></a>	
 						</div>
 						<Pagination />
 					</div>

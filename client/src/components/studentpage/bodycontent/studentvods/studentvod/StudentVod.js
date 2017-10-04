@@ -19,7 +19,7 @@ const StudentVod = () => (
 			<button type="button" className="btn btn-primary">3</button>
 			<button type="button" className="btn btn-primary">4</button>		
 			<button type="button" className="btn btn-primary">5</button>
-			<button type="button" className="btn btn-primary active">6</button>
+			<button type="button" className="btn btn-primary">6</button>
 			<button type="button" className="btn btn-primary">7</button>
 			<button type="button" className="btn btn-primary">8</button>		
 			<button type="button" className="btn btn-primary">9</button>
