@@ -4,13 +4,25 @@ import Pagination from "./pagination/Pagination";
 import CoachFilters from "./coachfilters/CoachFilters";
 import CoachImage from "./coachimage/CoachImage";
 import VodRequestForm from "./vodrequestform/VodRequestForm";
-import API from "../../../../utils/coachAPI";
+import CoachAPI from "../../../../utils/coachAPI";
 
 class VodRequest extends Component {
 	state = {
 		coachSearchVisible: true,
 		vodFormVisible: false
 	};
+
+	loadCoaches = event => {
+	    CoachAPI.getCoaches()
+	      .then(res =>
+	        this.setState({ coaches: res.data })
+	      )
+	      .catch(err => console.log(err));
+	};
+
+	componentDidMount() {
+    	this.loadCoaches();
+  	};
 
 	coachImageClick = event => {
 		this.setState({vodFormVisible: true});
