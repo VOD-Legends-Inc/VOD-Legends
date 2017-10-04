@@ -10,15 +10,17 @@ class VodRequest extends Component {
 	state = {
 		coachSearchVisible: true,
 		vodFormVisible: false,
-		coaches: []
+		coachesArray: [],
+		studentID: "59d432b7affaf94c40bf29a7",
 	};
 
 	loadCoaches = event => {
-	    CoachAPI.getCoaches()
-	      .then(res =>
-	        this.setState({ coaches: res.data })
-	      )
-	      .catch(err => console.log(err));
+
+		CoachAPI.getCoaches()
+	    	.then(res =>
+        		this.setState({ coachesArray: res.data })
+	    	)
+	      	.catch(err => console.log(err))
 	};
 
 	componentDidMount() {
@@ -36,7 +38,26 @@ class VodRequest extends Component {
 	}
 
     render() {
-        return (
+
+    	let coachesImageArray = [];
+
+    	for(let i = 0; i < this.state.coachesArray.length && i < 12; i++){
+    		coachesImageArray.push(
+    			<a key={i} href="#" onClick={this.coachImageClick}>
+    				<CoachImage key={i} 
+    					username={this.state.coachesArray[i].lolUserName}
+    					bio = {this.state.coachesArray[i].bio}
+    					elo = {this.state.coachesArray[i].elo}
+    					rating = {this.state.coachesArray[i].rating}
+    					firstName = {this.state.coachesArray[i].firstName}
+    					lastName = {this.state.coachesArray[i].lastName}
+    				/>
+    			</a>
+    		)
+    	}
+
+        return (        	
+
         	<div id="vodRequest">
 
         		{
@@ -49,12 +70,7 @@ class VodRequest extends Component {
 						<CoachFilters />
 
 						<div id="coachImages">
-							<a href="#" onClick={this.coachImageClick}><CoachImage /></a>
-							<a href="#" onClick={this.coachImageClick}><CoachImage /></a>
-							<a href="#" onClick={this.coachImageClick}><CoachImage /></a>
-							<a href="#" onClick={this.coachImageClick}><CoachImage /></a>
-							<a href="#" onClick={this.coachImageClick}><CoachImage /></a>
-							<a href="#" onClick={this.coachImageClick}><CoachImage /></a>	
+							{coachesImageArray}
 						</div>
 						<Pagination />
 					</div>

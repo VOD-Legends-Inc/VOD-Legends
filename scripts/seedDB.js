@@ -23,7 +23,7 @@ const coachSeed = [
       mainChampion : "Ashe",
       language : "English",
       rating : "9.2",
-      bio : "Experienced Silent Sniper",
+      bio : "Experienced Silent Sniper ready to help you climb the ladder!",
       password : "canttouchthis"
   },
   {
@@ -49,7 +49,7 @@ const coachSeed = [
       mainChampion : "Orianna",
       language : "English",
       rating : "8.2",
-      bio : "Masters tier coach at your service!",
+      bio : "Masters tier coach at your service! Escape from ELO hell!",
       password : "password2"
   },
   {
@@ -62,7 +62,7 @@ const coachSeed = [
       mainChampion : "Leblanc",
       language : "English",
       rating : "10",
-      bio : "I am Faker",
+      bio : "I am Faker. The best to ever the game! Get on my level.",
       password : "password3"
   },
   {
@@ -75,7 +75,7 @@ const coachSeed = [
       mainChampion : "Gnar",
       language : "English",
       rating : "9.4",
-      bio : "I will work with you to help you improve!",
+      bio : "I will work with you to help you improve! Lets Go!",
       password : "password4"
   },
   {
@@ -88,7 +88,7 @@ const coachSeed = [
       mainChampion : "Rengar",
       language : "English",
       rating : "9.1",
-      bio : "Seven years of video game coaching experience!",
+      bio : "Seven years coaching experience. Hop aboard the Freelo train!",
       password : "password5"
   },
 ];
@@ -138,9 +138,9 @@ db.Students
 
   const requestSeed = [
   {
-    student : "59d42d9455dfbd42743d0893",
-    coach : "ya59d42d9455dfbd42743d0896",
-    titleOfVOD : "Zyra game against Sona",
+    student : "Azianpinoy",
+    coach : "Bobloblaw",
+    titleOfVOD : "Zyra Game #1",
     vodURL : "https://www.youtube.com/embed/8PMvZS8WAhs",
     messageToCoach : "hey coach!",
     comments : [ 
@@ -195,7 +195,302 @@ db.Students
             "textArea" : "Comment 10"
         }
     ]
-  }
+  },
+  {
+    student : "Azianpinoy",
+    coach : "Bobloblaw",
+    titleOfVOD : "Zyra Game #2",
+    vodURL : "https://www.youtube.com/embed/8PMvZS8WAhs",
+    messageToCoach : "hey coach!",
+    comments : [ 
+        {
+            "commentNumber" : 1,
+            "timeStamp" : "3:22",
+            "textArea" : "Comment 1"
+        }, 
+        {
+            "commentNumber" : 2,
+            "timeStamp" : "5:22",
+            "textArea" : "Comment 2"
+        }, 
+        {
+            "commentNumber" : 3,
+            "timeStamp" : "6:22",
+            "textArea" : "Comment 3"
+        }, 
+        {
+            "commentNumber" : 4,
+            "timeStamp" : "11:22",
+            "textArea" : "Comment 4"
+        }, 
+        {
+            "commentNumber" : 5,
+            "timeStamp" : "13:22",
+            "textArea" : "Comment 5"
+        }, 
+        {
+            "commentNumber" : 6,
+            "timeStamp" : "18:22",
+            "textArea" : "Comment 6"
+        }, 
+        {
+            "commentNumber" : 7,
+            "timeStamp" : "22:22",
+            "textArea" : "Comment 7"
+        }, 
+        {
+            "commentNumber" : 8,
+            "timeStamp" : "32:22",
+            "textArea" : "Comment 8"
+        }, 
+        {
+            "commentNumber" : 9,
+            "timeStamp" : "36:22",
+            "textArea" : "Comment 9"
+        }, 
+        {
+            "commentNumber" : 10,
+            "timeStamp" : "42:22",
+            "textArea" : "Comment 10"
+        }
+    ]
+  },
+  {
+    student : "Azianpinoy",
+    coach : "Bobloblaw",
+    titleOfVOD : "Zyra Game #3",
+    vodURL : "https://www.youtube.com/embed/8PMvZS8WAhs",
+    messageToCoach : "hey coach!",
+    comments : [ 
+        {
+            "commentNumber" : 1,
+            "timeStamp" : "3:22",
+            "textArea" : "Comment 1"
+        }, 
+        {
+            "commentNumber" : 2,
+            "timeStamp" : "5:22",
+            "textArea" : "Comment 2"
+        }, 
+        {
+            "commentNumber" : 3,
+            "timeStamp" : "6:22",
+            "textArea" : "Comment 3"
+        }, 
+        {
+            "commentNumber" : 4,
+            "timeStamp" : "11:22",
+            "textArea" : "Comment 4"
+        }, 
+        {
+            "commentNumber" : 5,
+            "timeStamp" : "13:22",
+            "textArea" : "Comment 5"
+        }, 
+        {
+            "commentNumber" : 6,
+            "timeStamp" : "18:22",
+            "textArea" : "Comment 6"
+        }, 
+        {
+            "commentNumber" : 7,
+            "timeStamp" : "22:22",
+            "textArea" : "Comment 7"
+        }, 
+        {
+            "commentNumber" : 8,
+            "timeStamp" : "32:22",
+            "textArea" : "Comment 8"
+        }, 
+        {
+            "commentNumber" : 9,
+            "timeStamp" : "36:22",
+            "textArea" : "Comment 9"
+        }, 
+        {
+            "commentNumber" : 10,
+            "timeStamp" : "42:22",
+            "textArea" : "Comment 10"
+        }
+    ]
+  },
+  {
+    student : "Azianpinoy",
+    coach : "Bobloblaw",
+    titleOfVOD : "Zyra Game #4",
+    vodURL : "https://www.youtube.com/embed/8PMvZS8WAhs",
+    messageToCoach : "hey coach!",
+    comments : [ 
+        {
+            "commentNumber" : 1,
+            "timeStamp" : "3:22",
+            "textArea" : "Comment 1"
+        }, 
+        {
+            "commentNumber" : 2,
+            "timeStamp" : "5:22",
+            "textArea" : "Comment 2"
+        }, 
+        {
+            "commentNumber" : 3,
+            "timeStamp" : "6:22",
+            "textArea" : "Comment 3"
+        }, 
+        {
+            "commentNumber" : 4,
+            "timeStamp" : "11:22",
+            "textArea" : "Comment 4"
+        }, 
+        {
+            "commentNumber" : 5,
+            "timeStamp" : "13:22",
+            "textArea" : "Comment 5"
+        }, 
+        {
+            "commentNumber" : 6,
+            "timeStamp" : "18:22",
+            "textArea" : "Comment 6"
+        }, 
+        {
+            "commentNumber" : 7,
+            "timeStamp" : "22:22",
+            "textArea" : "Comment 7"
+        }, 
+        {
+            "commentNumber" : 8,
+            "timeStamp" : "32:22",
+            "textArea" : "Comment 8"
+        }, 
+        {
+            "commentNumber" : 9,
+            "timeStamp" : "36:22",
+            "textArea" : "Comment 9"
+        }, 
+        {
+            "commentNumber" : 10,
+            "timeStamp" : "42:22",
+            "textArea" : "Comment 10"
+        }
+    ]
+  },
+  {
+    student : "Azianpinoy",
+    coach : "Bobloblaw",
+    titleOfVOD : "Zyra Game #5",
+    vodURL : "https://www.youtube.com/embed/8PMvZS8WAhs",
+    messageToCoach : "hey coach!",
+    comments : [ 
+        {
+            "commentNumber" : 1,
+            "timeStamp" : "3:22",
+            "textArea" : "Comment 1"
+        }, 
+        {
+            "commentNumber" : 2,
+            "timeStamp" : "5:22",
+            "textArea" : "Comment 2"
+        }, 
+        {
+            "commentNumber" : 3,
+            "timeStamp" : "6:22",
+            "textArea" : "Comment 3"
+        }, 
+        {
+            "commentNumber" : 4,
+            "timeStamp" : "11:22",
+            "textArea" : "Comment 4"
+        }, 
+        {
+            "commentNumber" : 5,
+            "timeStamp" : "13:22",
+            "textArea" : "Comment 5"
+        }, 
+        {
+            "commentNumber" : 6,
+            "timeStamp" : "18:22",
+            "textArea" : "Comment 6"
+        }, 
+        {
+            "commentNumber" : 7,
+            "timeStamp" : "22:22",
+            "textArea" : "Comment 7"
+        }, 
+        {
+            "commentNumber" : 8,
+            "timeStamp" : "32:22",
+            "textArea" : "Comment 8"
+        }, 
+        {
+            "commentNumber" : 9,
+            "timeStamp" : "36:22",
+            "textArea" : "Comment 9"
+        }, 
+        {
+            "commentNumber" : 10,
+            "timeStamp" : "42:22",
+            "textArea" : "Comment 10"
+        }
+    ]
+  },
+  {
+    student : "Azianpinoy",
+    coach : "Bobloblaw",
+    titleOfVOD : "Zyra Game #6",
+    vodURL : "https://www.youtube.com/embed/8PMvZS8WAhs",
+    messageToCoach : "hey coach!",
+    comments : [ 
+        {
+            "commentNumber" : 1,
+            "timeStamp" : "3:22",
+            "textArea" : "Comment 1"
+        }, 
+        {
+            "commentNumber" : 2,
+            "timeStamp" : "5:22",
+            "textArea" : "Comment 2"
+        }, 
+        {
+            "commentNumber" : 3,
+            "timeStamp" : "6:22",
+            "textArea" : "Comment 3"
+        }, 
+        {
+            "commentNumber" : 4,
+            "timeStamp" : "11:22",
+            "textArea" : "Comment 4"
+        }, 
+        {
+            "commentNumber" : 5,
+            "timeStamp" : "13:22",
+            "textArea" : "Comment 5"
+        }, 
+        {
+            "commentNumber" : 6,
+            "timeStamp" : "18:22",
+            "textArea" : "Comment 6"
+        }, 
+        {
+            "commentNumber" : 7,
+            "timeStamp" : "22:22",
+            "textArea" : "Comment 7"
+        }, 
+        {
+            "commentNumber" : 8,
+            "timeStamp" : "32:22",
+            "textArea" : "Comment 8"
+        }, 
+        {
+            "commentNumber" : 9,
+            "timeStamp" : "36:22",
+            "textArea" : "Comment 9"
+        }, 
+        {
+            "commentNumber" : 10,
+            "timeStamp" : "42:22",
+            "textArea" : "Comment 10"
+        }
+    ]
+  },
 ];
 console.log(requestSeed);
 db.Requests

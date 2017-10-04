@@ -2,7 +2,7 @@ import axios from "axios";
 
 export default {
   // Gets all requests
-  getRequest: function() {
+  getRequests: function() {
     return axios.get("/api/requests");
   },
   // Gets the request with the given id
@@ -14,7 +14,7 @@ export default {
     return axios.delete("/api/requests/" + id);
   },
   // Saves a request to the database
-  saveRequest: function(coachData) {
+  saveRequest: function(requestData) {
     return axios.post("/api/requests", requestData);
   }
 };
