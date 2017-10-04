@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Component } from "react"; 
 import "./CoachPage.css";
 import Navbar from "./navbar/Navbar";
 import BodyContent from "./bodycontent/BodyContent";
