@@ -6,10 +6,10 @@ const CoachImage = () => (
 <div className="coachImage">
 	<div className="container-fluid">
 		<div className="topDiv">
-			<img src="./images/empty_profile.png" />
+			<img src="./images/empty_profile.png" alt="profileImage"/>
 			<h5>Username</h5>
 			<p className="text-center">"Diamond Support main. Will help you improve in no time!"</p>
-			<img id="eloPic" src="./images/diamond.png" /> 
+			<img id="eloPic" alt="profileImage" src="./images/diamond.png" /> 
 			<span>Diamond Division</span>
 		</div>
 		<div className="botDiv">

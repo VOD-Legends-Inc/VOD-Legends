@@ -29,12 +29,12 @@ class VodInbox extends Component {
 
 							<div id="vodImages">
 
-								<a href="#" onClick={this.vodClick}><VodImage /></a>
-								<a href="#" onClick={this.vodClick}><VodImage /></a>
-								<a href="#" onClick={this.vodClick}><VodImage /></a>
-								<a href="#" onClick={this.vodClick}><VodImage /></a>
-								<a href="#" onClick={this.vodClick}><VodImage /></a>
-								<a href="#" onClick={this.vodClick}><VodImage /></a>	
+								<a href="" onClick={this.vodClick}><VodImage /></a>
+								<a href="" onClick={this.vodClick}><VodImage /></a>
+								<a href="" onClick={this.vodClick}><VodImage /></a>
+								<a href="" onClick={this.vodClick}><VodImage /></a>
+								<a href="" onClick={this.vodClick}><VodImage /></a>
+								<a href="" onClick={this.vodClick}><VodImage /></a>	
 
 							</div>
 

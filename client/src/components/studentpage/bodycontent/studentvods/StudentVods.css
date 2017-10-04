@@ -8,6 +8,13 @@
 
 #studentVodImages{
 	margin-left: 10%;
+	border: solid 1px white;
+	width: 80%;
+	padding-left: 1%;
+	background-color: #3a3a3d;
+	margin-bottom: 20px;
+	padding-top: 20px;
+	padding-bottom: 20px;
 }
 
 #studentVods button{

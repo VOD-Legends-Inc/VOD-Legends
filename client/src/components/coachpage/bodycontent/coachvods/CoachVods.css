@@ -29,4 +29,14 @@
 
 #coachVodImages{
 	margin-left: 10%;
+	width: 80%;
+	border: solid 1px white;
+	margin-bottom: 20px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	background-color: #3a3a3d;
+}
+
+#returnStudentButton{
+	margin-bottom: 10px;
 }

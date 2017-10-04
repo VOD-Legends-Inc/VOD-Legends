@@ -11,13 +11,11 @@ class StudentVods extends Component {
 	}
 
 	vodImageClick = event => {
-		alert("this worked");
 		this.setState({vodSectionVisible: false});
 		this.setState({videoSectionVisible: true});
 	}
 
 	returnButtonClick = event => {
-		alert("this worked");
 		this.setState({vodSectionVisible: true});
 		this.setState({videoSectionVisible: false});
 	}
@@ -33,12 +31,12 @@ class StudentVods extends Component {
 						<h4>Your VODS</h4>
 							
 						<div id="studentVodImages">
-							<a href="#" onClick={this.vodImageClick}><StudentVodImage /></a>
-							<a href="#" onClick={this.vodImageClick}><StudentVodImage /></a>
-							<a href="#" onClick={this.vodImageClick}><StudentVodImage /></a>
-							<a href="#" onClick={this.vodImageClick}><StudentVodImage /></a>
-							<a href="#" onClick={this.vodImageClick}><StudentVodImage /></a>
-							<a href="#" onClick={this.vodImageClick}><StudentVodImage /></a>
+							<a href="" onClick={this.vodImageClick}><StudentVodImage /></a>
+							<a href="" onClick={this.vodImageClick}><StudentVodImage /></a>
+							<a href="" onClick={this.vodImageClick}><StudentVodImage /></a>
+							<a href="" onClick={this.vodImageClick}><StudentVodImage /></a>
+							<a href="" onClick={this.vodImageClick}><StudentVodImage /></a>
+							<a href="" onClick={this.vodImageClick}><StudentVodImage /></a>
 						</div>
 					</div>
 					: null	

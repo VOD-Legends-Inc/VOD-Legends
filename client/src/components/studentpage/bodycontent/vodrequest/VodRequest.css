@@ -1,10 +1,10 @@
 #vodRequest h4{
-	color: white;
-	margin-left: 10%;
-	width: 50%;
+	color: rgb(0, 113, 193);
+	width: 30%;
 	margin-top: 20px;
 	display: inline-block;
-	float: left;
+	font-size: 20px;
+	font-weight: bold;
 }
 
 #vodRequest button{
@@ -17,6 +17,14 @@
 	margin-left: 10%;
 	margin-top: 10px;
 	margin-bottom: 10px;
+	border: solid 1px lightgrey;
+	width: 80%;
+	padding-left: 1%;
+	padding-top: 10px;
+	background-color: #3a3a3d;
+	-webkit-border-radius: 5px;
+  	-moz-border-radius: 5px;
+ 	 border-radius: 5px;
 }
 
 #vodRequestButton{
@@ -42,4 +50,11 @@
     border-radius: 5px;
     margin-top: 10px;
     margin-left: 20px;
+}
+
+#coachSearchHeader{
+	border-bottom: solid 1px white;
+	margin-bottom: 10px;
+	width: 80%;
+	margin-left: 10%;
 }

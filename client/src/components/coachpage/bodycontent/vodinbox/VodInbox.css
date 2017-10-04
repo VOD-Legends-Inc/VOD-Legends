@@ -8,20 +8,32 @@
 
 #vodImages{
 	margin-left: 10%;
+	width: 80%;
+	margin-bottom: 10px;
+	background-color: #3a3a3d;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	border: solid 1px white;
+	-webkit-border-radius: 5px;
+  	-moz-border-radius: 5px;
+ 	 border-radius: 5px;
 }
 
 .vodImage{
-	width: 25%;
-	height: 205px;
-	background-image: url("./karma.png");
+	width: 29%;
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center; 
-	border: solid 1px blue;
+	border: solid 1px white;
 	display: inline-block;
 	margin-left: 3%;
 	margin-top: 10px;
 	margin-bottom: 10px;
+}
+
+.vodImage img{
+	width: 100%;
+	border: solid 1px white;
 }
 
 .vodImage h5{
@@ -29,6 +41,7 @@
 	background-color: rgba(33,34,33, .8);
 	padding: 5px;
 	margin: 0;
+	text-align: center;
 }
 
 #inboxNavButtons{
@@ -40,4 +53,13 @@
 	margin-right: 10px;
 	margin-bottom: 20px;
 	background-color: grey;
+}
+
+iframe{
+	border: solid 1px white;
+}
+
+#topVodImage{
+	font-weight: bold;
+	color: white;
 }

@@ -1,14 +1,13 @@
 #vodRequestForm h4{
 	float: none;
 	display: inline-block;
-	width: 30%;
+	width: 40%;
 }
 
 #toCoach{
 	text-align: right;
 	display: inline-block;
-	width: 40% !important;
-	margin-right: 10% !important;
+	width: 60% !important;
 }
 
 .form-horizontal .form-group {
@@ -31,4 +30,23 @@
 
 #vodRequestForm textarea{
 	width: 100%;
+}
+
+#requestFormHeader{
+	margin-left: 10%;
+	width: 80%;
+	border-bottom: solid 1px white;
+}
+
+#vodRequestForm form{
+	border: solid 1px white;
+	width: 80%;
+	margin-left: 10%;
+	margin-top: 10px;
+	padding-top: 20px;
+	padding-bottom: 10px;
+	background-color: #3a3a3d;
+	-webkit-border-radius: 5px;
+  	-moz-border-radius: 5px;
+ 	 border-radius: 5px;
 }

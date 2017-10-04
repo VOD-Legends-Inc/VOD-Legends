@@ -23,13 +23,11 @@ class VodRequest extends Component {
 	}
 
 	coachImageClick = event => {
-		alert("this worked");
 		this.setState({vodFormVisible: true});
 		this.setState({coachSearchVisible: false});
 	};
 
 	cancelButtonClick = event => {
-		alert("this worked");
 		this.setState({vodFormVisible: false});
 		this.setState({coachSearchVisible: true});
 	}
@@ -42,19 +40,23 @@ class VodRequest extends Component {
         			this.state.coachSearchVisible
         			?
         			<div>
-						<h4>Coach Search:</h4>
-						<Pagination />
+	        			<div id="coachSearchHeader">
+							<h4>Coach Search:</h4>
+						</div>
 						<CoachFilters />
 
 						<div id="coachImages">
-							<a href="#" onClick={this.coachImageClick}><CoachImage /></a>
-							<a href="#" onClick={this.coachImageClick}><CoachImage /></a>
-							<a href="#" onClick={this.coachImageClick}><CoachImage /></a>
-							<a href="#" onClick={this.coachImageClick}><CoachImage /></a>
-							<a href="#" onClick={this.coachImageClick}><CoachImage /></a>
-							<a href="#" onClick={this.coachImageClick}><CoachImage /></a>
+							<a href="" onClick={this.coachImageClick}><CoachImage /></a>
+							<a href="" onClick={this.coachImageClick}><CoachImage /></a>
+							<a href="" onClick={this.coachImageClick}><CoachImage /></a>
+							<a href="" onClick={this.coachImageClick}><CoachImage /></a>
+							<a href="" onClick={this.coachImageClick}><CoachImage /></a>
+							<a href="" onClick={this.coachImageClick}><CoachImage /></a>
 						</div>
+						<Pagination />
 					</div>
+
+
 					: null
 				}
 
