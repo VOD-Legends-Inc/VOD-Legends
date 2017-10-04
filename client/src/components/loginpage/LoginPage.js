@@ -1,16 +1,16 @@
-import React, { Component } from "react"; 
-import "./CoachPage.css";
+import React from "react";
+import "./LoginPage.css";
 import Navbar from "./navbar/Navbar";
 import BodyContent from "./bodycontent/BodyContent";
 import FooterDiv from "./footerdiv/FooterDiv";
 
 
-const CoachPage = () => (
-  <div id="coachPage" className="container">
+const LoginPage = () => (
+  <div id="LoginPage" className="container">
     <Navbar />
     <BodyContent />
     <FooterDiv />
   </div>
 );
 
-export default CoachPage;
+export default LoginPage;
