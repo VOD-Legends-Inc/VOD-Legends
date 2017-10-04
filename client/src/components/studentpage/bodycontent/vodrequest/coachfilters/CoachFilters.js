@@ -7,7 +7,7 @@ const CoachFilters = () => (
 	<h5 id="coachFilterLabel"><b>Coach Filters: </b></h5>
 	
 	<form id="serverFilter" className="coachFilter">
-	  <label for="server">Server: </label>
+	  <label htmlFor="server">Server: </label>
 	  <select name="server">
 	    <option value="all">All Servers</option>
 	    <option value="na">North America</option>
@@ -23,7 +23,7 @@ const CoachFilters = () => (
 	</form>
 
 	<form id="roleFilter" className="coachFilter">
-	  <label for="role">Role: </label>
+	  <label htmlFor="role">Role: </label>
 	  <select name="role">
 	    <option value="all">All Roles</option>
 	    <option value="top">Top</option>
@@ -35,14 +35,14 @@ const CoachFilters = () => (
 	</form>
 
 	<form id="championFilter" className="coachFilter">
-	  <label for="champion">Champion</label>
+	  <label htmlFor="champion">Champion</label>
 	  <select name="champion">
 	    <option value="all">All Champions: </option>
 	  </select>
 	</form>
 
 	<form id="languageFilter" className="coachFilter">
-	  <label for="language">Language: </label>
+	  <label htmlFor="language">Language: </label>
 	  <select name="language">
 	    <option value="all">Any Language</option>
 	    <option value="en">English</option>
