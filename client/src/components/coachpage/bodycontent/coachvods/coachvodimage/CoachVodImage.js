@@ -15,4 +15,3 @@ const CoachVodImage = () => (
 );
 
 export default CoachVodImage;
-s
