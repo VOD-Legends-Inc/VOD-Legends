@@ -29,7 +29,6 @@ class StudentVods extends Component {
 	vodImageClick = event => {
 		this.setState({vodSectionVisible: false});
 		this.setState({videoSectionVisible: true});
-		console.log(event.target);
 	}
 
 	returnButtonClick = event => {
