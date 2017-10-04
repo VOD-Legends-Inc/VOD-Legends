@@ -57,6 +57,34 @@
 }
 
 #commentComplete{
-	margin-bottom: 40px;
+	margin-bottom: 20px;
 	border: solid 1px white;
+}
+
+#coachVodForm{
+	border: solid 1px white;
+	width: 80%;
+	margin-left: 10%;
+	margin-bottom: 10px;
+	padding-top: 10px;
+	margin-top: 20px;
+	background-color: #3a3a3d;
+}
+
+#coachCommentBackground{
+	border: solid 1px white;
+	width: 80%;
+	margin-left: 10%;
+	min-height: 100px;
+	background-color: #3a3a3d;
+}
+
+#finalReportDiv{
+	border: solid 1px white;
+	width: 80%;
+	margin-left: 10%;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	padding-bottom: 20px;
+	background-color: #3a3a3d;	
 }

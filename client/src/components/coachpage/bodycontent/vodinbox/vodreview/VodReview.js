@@ -1,6 +1,5 @@
 import React, { Component } from "react"; 
 import "./VodReview.css";
-import VodInbox from "../VodInbox";
 
 class VodReview extends Component {
 	state = {
@@ -11,22 +10,23 @@ class VodReview extends Component {
 		timeStamp: "",
 		textArea: "",
 		coachingComments: [],
+		finalButtonVisible: false,
 	};
 
 	addComment = event => {
-		{
-			this.state.commentNumber != this.state.currentComment
-			?
-			this.setState({
-				commentNumber: this.state.currentComment + 1,
-				currentComment: this.state.currentComment + 1,
-			})
-			:
-			this.setState({
-				commentNumber: this.state.commentNumber + 1,
-				currentComment: this.state.currentComment + 1,
-			});
-		}
+		
+		this.state.commentNumber !== this.state.currentComment
+		?
+		this.setState({
+			commentNumber: this.state.currentComment + 1,
+			currentComment: this.state.currentComment + 1,
+		})
+		:
+		this.setState({
+			commentNumber: this.state.commentNumber + 1,
+			currentComment: this.state.currentComment + 1,
+		});
+		
 	}
 
 	pauseVideo = event => {
@@ -35,7 +35,8 @@ class VodReview extends Component {
 
 	finalReport = event => {
 		this.setState({
-			finalReportVisible: true
+			finalReportVisible: true,
+			finalButtonVisible: true
 		});
 	}
 
@@ -64,7 +65,16 @@ class VodReview extends Component {
     		commentNumber: commentToShow.commentNumber,
     		timeStamp: commentToShow.timeStamp,
     		textArea: commentToShow.textArea,
+    		finalReportVisible: false,
+    		
     	});
+    }
+
+    finalReportClick = event => {
+    	this.setState({
+    		finalReportVisible: true,
+
+    	})
     }
 
 	render(){
@@ -76,6 +86,8 @@ class VodReview extends Component {
 			comments.push(<button type="button" className="btn btn-primary" ref="commentButton" onClick={this.commentNumberClick} key={i} value={i}>{i}</button>);
 		};
 
+
+
 		return(
 			<div id="vodReview">
 	
@@ -83,50 +95,62 @@ class VodReview extends Component {
 
 				<h5 className="text-center">Zyra Game against Sona - September 8, 2017</h5>
 
-				<iframe ref="vidRef" className="center-block" width="80%" height="400" src={url} frameBorder="0" onClick={this.pauseVideo} allowFullScreen></iframe>
+				<iframe ref="vidRef" className="center-block" width="80%" height="400" src={url} frameBorder="0" onClick={this.pauseVideo} title="video" allowFullScreen></iframe>
 	
+				<div id="addCommentButtons">
+					<button type="button" className="btn btn-success" onClick={this.addComment}>Add Comment</button>
+					<button type="button" className="btn btn-success" onClick={this.finalReport}>Add Final Report</button>
+				</div>
+				
+				<div id="coachCommentBackground">
+					<h5 className="text-center"><u>Your Coaching Comments</u></h5>
+					<div id="commentButtons">
+						{comments}
+						{
+							this.state.finalButtonVisible
+							?
+							<button type="button" className="btn btn-primary" ref="finalButton" onClick={this.finalReportClick} >Final Report</button>
+							: null					
+						}
+					</div>
+				</div>
+
 				{
 					!this.state.finalReportVisible
 					?
 					<div>
-						<div id="addCommentButtons">
-							<button type="button" className="btn btn-success" onClick={this.addComment}>Add Comment</button>
-							<button type="button" className="btn btn-success" onClick={this.finalReport}>Add Final Report</button>
-						</div>
-						<h5 className="text-center"><u>Your Coaching Comments</u></h5>
-						<div id="commentButtons">
-							{comments}
-						</div>
-						
-						<p id="coachCommentNumber">Comment Number:</p>
-						<input type="text" ref="coachCommentNumber" onChange={this.handleInputChange} name="commentNumber" value={
-							this.state.commentNumber == 0
-							?
-							"No comment selected"
-							:
-							"Comment #" + this.state.commentNumber				
-						} />
-						
-						<p id="coachTimeStamp">Timestamp:</p>
-						<input type="text" ref="coachTimeStamp" onChange={this.handleInputChange} name="timeStamp" value={
-							this.state.commentNumber == 0
-							?
-							"No comment selected"
-							:
-							this.state.timeStamp
-						} />
+						<div id="coachVodForm">
+							<p id="coachCommentNumber">Comment Number:</p>
+							<input type="text" ref="coachCommentNumber" onChange={this.handleInputChange} name="commentNumber" value={
+								this.state.commentNumber === 0
+								?
+								"No comment selected"
+								:
+								"Comment #" + this.state.commentNumber				
+							} />
+							
+							<p id="coachTimeStamp">Timestamp:</p>
+							<input type="text" ref="coachTimeStamp" onChange={this.handleInputChange} name="timeStamp" value={
+								this.state.commentNumber === 0
+								?
+								"No comment selected"
+								:
+								this.state.timeStamp
+							} />
 
-						<p>Your Coaching Comment:</p>
-					    <textarea id="coachingComment" name="textArea" onChange={this.handleInputChange} value={this.state.textArea} rows="4" ref="coachTextArea" />
+							<p>Your Coaching Comment:</p>
+						    <textarea id="coachingComment" name="textArea" onChange={this.handleInputChange} value={this.state.textArea} rows="4" ref="coachTextArea" />
 
-						<button type="button" id="commentComplete" onClick={this.commentComplete} className="btn btn-primary center-block">Comment Complete</button>
+
+							<button type="button" id="commentComplete" onClick={this.commentComplete} className="btn btn-primary center-block">Comment Complete</button>
+						</div>
 					</div>
 					: null
 				}
 				{
 					this.state.finalReportVisible
 					?
-					<div>
+					<div id="finalReportDiv">
 						
 						<h5 className="text-center"><u>Final Report</u></h5>	
 						

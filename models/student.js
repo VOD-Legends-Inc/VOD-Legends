@@ -6,7 +6,6 @@ const studentSchema = new Schema({
   lastName: { type: String, required: true },
   lolUserName: { type: String, required: true },
   role: { type: String, required: true },
-  request: String,
   bio: String,
   password: { type: String, required: true }
 });

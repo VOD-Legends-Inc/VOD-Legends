@@ -8,9 +8,9 @@ const StudentImages = () => (
 	<div className="studentImage">
 		<div className="container-fluid">
 			<div className="topDiv">
-				<img src="./images/empty_profile.png" />
+				<img src="./images/empty_profile.png" alt="profileImage" />
 				<h5>Username</h5>
-				<img id="eloPic" src="./images/bronze.png" /> 
+				<img id="eloPic" src="./images/bronze.png" alt="eloImage"/> 
 				<span>Broze Division</span>
 			</div>
 			<div className="botDiv">
@@ -24,9 +24,9 @@ const StudentImages = () => (
 	<div className="studentImage">
 		<div className="container-fluid">
 			<div className="topDiv">
-				<img src="./images/empty_profile.png" />
+				<img src="./images/empty_profile.png" alt="profileImage" />
 				<h5>Username</h5>
-				<img id="eloPic" src="./images/bronze.png" /> 
+				<img id="eloPic" src="./images/bronze.png" alt="eloImage" /> 
 				<span>Broze Division</span>
 			</div>
 			<div className="botDiv">
@@ -40,9 +40,9 @@ const StudentImages = () => (
 	<div className="studentImage">
 		<div className="container-fluid">
 			<div className="topDiv">
-				<img src="./images/empty_profile.png" />
+				<img src="./images/empty_profile.png" alt="profileImage" />
 				<h5>Username</h5>
-				<img id="eloPic" src="./images/bronze.png" /> 
+				<img id="eloPic" src="./images/bronze.png" alt="eloImage" /> 
 				<span>Broze Division</span>
 			</div>
 			<div className="botDiv">
@@ -56,9 +56,9 @@ const StudentImages = () => (
 	<div className="studentImage">
 		<div className="container-fluid">
 			<div className="topDiv">
-				<img src="./images/empty_profile.png" />
+				<img src="./images/empty_profile.png" alt="profileImage" />
 				<h5>Username</h5>
-				<img id="eloPic" src="./images/bronze.png" /> 
+				<img id="eloPic" src="./images/bronze.png" alt="eloImage" /> 
 				<span>Broze Division</span>
 			</div>
 			<div className="botDiv">
@@ -72,9 +72,9 @@ const StudentImages = () => (
 	<div className="studentImage">
 		<div className="container-fluid">
 			<div className="topDiv">
-				<img src="./images/empty_profile.png" />
+				<img src="./images/empty_profile.png" alt="profileImage" />
 				<h5>Username</h5>
-				<img id="eloPic" src="./images/bronze.png" /> 
+				<img id="eloPic" src="./images/bronze.png" alt="eloImage" /> 
 				<span>Broze Division</span>
 			</div>
 			<div className="botDiv">
@@ -88,9 +88,9 @@ const StudentImages = () => (
 	<div className="studentImage">
 		<div className="container-fluid">
 			<div className="topDiv">
-				<img src="./images/empty_profile.png" />
+				<img src="./images/empty_profile.png" alt="profileImage" />
 				<h5>Username</h5>
-				<img id="eloPic" src="./images/bronze.png" /> 
+				<img id="eloPic" src="./images/bronze.png" alt="eloImage" /> 
 				<span>Broze Division</span>
 			</div>
 			<div className="botDiv">

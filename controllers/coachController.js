@@ -1,5 +1,4 @@
 const db = require("../models");
-const mongoose = require("mongoose");
 
 ///------------Defining methods for the coachController----------------------///
 module.exports = {

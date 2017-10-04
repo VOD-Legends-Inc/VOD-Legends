@@ -2,8 +2,13 @@ import axios from "axios";
 
 export default {
   // Gets all coaches
+<<<<<<< HEAD
   getCoach: function() {
     return axios.get("/api/coach");
+=======
+  getCoaches: function() {
+    return axios.get("/api/coaches");
+>>>>>>> 316ff4e43c2e333be451bdd4590782c3fd8d6773
   },
   // Gets the coach with the given id
   getCoach: function(id) {

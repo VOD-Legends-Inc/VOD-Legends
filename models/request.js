@@ -8,7 +8,6 @@ const requestSchema = new Schema({
   vodURL: { type: String, required: true },
   messageToCoach: { type: String, required: true },
   comments: Array,
-  noteToStudent: String,
 });
 
 const Request = mongoose.model("Requests", requestSchema);

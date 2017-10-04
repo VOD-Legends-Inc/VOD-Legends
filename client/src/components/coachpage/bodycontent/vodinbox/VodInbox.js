@@ -6,7 +6,7 @@ import VodImage from "./vodimage/VodImage";
 
 class VodInbox extends Component {
 	state = {
-		vodSelected: false
+		vodSelected: false,
 	};
 
 	vodClick = event => {
@@ -15,7 +15,7 @@ class VodInbox extends Component {
 
 	returnToInbox = event => {
 		this.setState({vodSelected: false});
-	}
+	};
 
 	render() {
 	    return (
