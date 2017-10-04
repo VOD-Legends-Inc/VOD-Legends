@@ -37,9 +37,9 @@ class CoachVods extends Component {
 
 						<h4>Your Student's Reviewed VODs</h4>
 						<div id="coachVodImages">
-							<a href="" onClick={this.vodImageClick}><CoachVodImage /></a>
-							<a href="" onClick={this.vodImageClick}><CoachVodImage /></a>
-							<a href="" onClick={this.vodImageClick}><CoachVodImage /></a>
+							<a href="#" onClick={this.vodImageClick}><CoachVodImage /></a>
+							<a href="#" onClick={this.vodImageClick}><CoachVodImage /></a>
+							<a href="#" onClick={this.vodImageClick}><CoachVodImage /></a>
 						</div>
 						<div id="studentVodNavButtons">
 							<button type="button" className="btn btn-primary">Previous</button>

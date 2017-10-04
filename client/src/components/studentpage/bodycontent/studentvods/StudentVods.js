@@ -31,12 +31,12 @@ class StudentVods extends Component {
 						<h4>Your VODS</h4>
 							
 						<div id="studentVodImages">
-							<a href="" onClick={this.vodImageClick}><StudentVodImage /></a>
-							<a href="" onClick={this.vodImageClick}><StudentVodImage /></a>
-							<a href="" onClick={this.vodImageClick}><StudentVodImage /></a>
-							<a href="" onClick={this.vodImageClick}><StudentVodImage /></a>
-							<a href="" onClick={this.vodImageClick}><StudentVodImage /></a>
-							<a href="" onClick={this.vodImageClick}><StudentVodImage /></a>
+							<a href="#" onClick={this.vodImageClick}><StudentVodImage /></a>
+							<a href="#" onClick={this.vodImageClick}><StudentVodImage /></a>
+							<a href="#" onClick={this.vodImageClick}><StudentVodImage /></a>
+							<a href="#" onClick={this.vodImageClick}><StudentVodImage /></a>
+							<a href="#" onClick={this.vodImageClick}><StudentVodImage /></a>
+							<a href="#" onClick={this.vodImageClick}><StudentVodImage /></a>
 						</div>
 					</div>
 					: null	

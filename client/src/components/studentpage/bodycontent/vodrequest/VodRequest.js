@@ -12,16 +12,6 @@ class VodRequest extends Component {
 		vodFormVisible: false
 	};
 
-	componentDidMount() {
-		this.loadCoaches();
-	}
-
-	loadCoaches = () => {
-		API.getCoaches()
-			.then(res => console.log(res))
-			.catch(err => console.log(err));
-	}
-
 	coachImageClick = event => {
 		this.setState({vodFormVisible: true});
 		this.setState({coachSearchVisible: false});
@@ -46,12 +36,12 @@ class VodRequest extends Component {
 						<CoachFilters />
 
 						<div id="coachImages">
-							<a href="" onClick={this.coachImageClick}><CoachImage /></a>
-							<a href="" onClick={this.coachImageClick}><CoachImage /></a>
-							<a href="" onClick={this.coachImageClick}><CoachImage /></a>
-							<a href="" onClick={this.coachImageClick}><CoachImage /></a>
-							<a href="" onClick={this.coachImageClick}><CoachImage /></a>
-							<a href="" onClick={this.coachImageClick}><CoachImage /></a>
+							<a href="#" onClick={this.coachImageClick}><CoachImage /></a>
+							<a href="#" onClick={this.coachImageClick}><CoachImage /></a>
+							<a href="#" onClick={this.coachImageClick}><CoachImage /></a>
+							<a href="#" onClick={this.coachImageClick}><CoachImage /></a>
+							<a href="#" onClick={this.coachImageClick}><CoachImage /></a>
+							<a href="#" onClick={this.coachImageClick}><CoachImage /></a>
 						</div>
 						<Pagination />
 					</div>
