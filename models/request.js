@@ -7,7 +7,9 @@ const requestSchema = new Schema({
   titleOfVOD: { type: String, required: true },
   vodURL: { type: String, required: true },
   messageToCoach: { type: String, required: true },
+  stage: { type: String, required: true },
   comments: Array,
+  finalReport: Object,
 });
 
 const Request = mongoose.model("Requests", requestSchema);

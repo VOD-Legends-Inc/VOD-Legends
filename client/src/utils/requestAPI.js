@@ -18,5 +18,10 @@ export default {
 
   saveRequest: function(requestData) {
     return axios.post("/api/requests", requestData);
+  },
+
+  updateRequest: function(id, requestData) {
+    return axios.put("/api/requests/" + id , requestData);
   }
+
 };

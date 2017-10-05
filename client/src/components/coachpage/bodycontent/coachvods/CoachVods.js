@@ -1,18 +1,47 @@
 import React, { Component } from "react"; 
 import "./CoachVods.css";
-import StudentImages from "./studentimages/StudentImages";
+import StudentImage from "./studentimage/StudentImage";
 import CoachVodImage from "./coachvodimage/CoachVodImage";
 import CoachVod from "./coachvod/CoachVod";
+import CoachAPI from "../../../../utils/coachAPI";
+import StudentAPI from "../../../../utils/studentAPI";
 
 class CoachVods extends Component {
 	state = {
 		vodSectionVisible: false,
 		studentSectionVisible: true,
+		coachID: "59d65ee217664a80bc6556bf",
+		coachStudents: [], 
+		studentsData: []
 	};
+
+	loadPage = event => {
+
+		CoachAPI.getCoach(this.state.coachID)
+	    	.then(res =>
+        		this.setState({ coachStudents: res.data.studentsArray })
+	    	)
+	      	.catch(err => console.log(err));
+
+	    console.log(this.state.coachStudents);
+
+	    for(let i = 0; i < this.state.coachStudents.length; i++){
+			StudentAPI.getStudent(this.state.coachStudents[i])
+		    	.then(res =>
+	        		this.state.studentsData.push(res.data)
+		    	)
+		      	.catch(err => console.log(err));	
+		}
+	};
+
+	componentDidMount() {
+    	this.loadPage();
+  	};
 
 	vodImageClick = event => {
 		this.setState({studentSectionVisible: false});
 		this.setState({vodSectionVisible: true});
+		console.log(this.state)
 	}
 
 	cancelButtonClick = event => {
@@ -28,8 +57,10 @@ class CoachVods extends Component {
 	    			this.state.studentSectionVisible
 	    			?
 	    			<div>
+
 		    			<h4>Your Students</h4>
-						<StudentImages />
+						<StudentImage />
+
 						<div id="studentNavButtons">
 							<button type="button" className="btn btn-primary">Previous</button>
 							<button type="button" className="btn btn-primary">Next</button>

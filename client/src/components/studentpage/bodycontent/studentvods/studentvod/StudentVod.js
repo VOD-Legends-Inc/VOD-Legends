@@ -20,6 +20,7 @@ class StudentVod extends Component {
     		textArea: commentToShow.textArea,
     		finalReportVisible: false,
     	});
+    	console.log(this.state);
 	}
 
 	finalReportClick = event => {
@@ -71,13 +72,13 @@ class StudentVod extends Component {
 						<h5 className="text-center"><u>Final Report</u></h5>	
 						
 						<p>Overall Game Review:</p>
-					    <textarea id="coachingComment" rows="8"  />
+					    <textarea id="coachingComment" rows="8" value={this.props.overall}  />
 
 					    <p>Key Areas of Improvement</p>
-					    <input type="text" />
+					    <input type="text" value={this.props.improvement}/>
 
 					    <p>Usefule Resources</p>
-					    <input type="text" />
+					    <input type="text" value={this.props.resources}/>
 
 
 

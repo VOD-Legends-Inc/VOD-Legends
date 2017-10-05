@@ -12,6 +12,7 @@ class VodRequest extends Component {
 		vodFormVisible: false,
 		coachesArray: [],
 		studentID: "59d432b7affaf94c40bf29a7",
+		chosenCoach: "",
 	};
 
 	loadCoaches = event => {
@@ -43,7 +44,11 @@ class VodRequest extends Component {
 
     	for(let i = 0; i < this.state.coachesArray.length && i < 12; i++){
     		coachesImageArray.push(
-    			<a key={i} href="#" onClick={this.coachImageClick}>
+    			<a key={i} href="#" onClick={(event) => {
+    				this.setState({chosenCoach: this.state.coachesArray[i].lolUserName});
+    				this.coachImageClick();
+    				}
+    			}>
     				<CoachImage key={i} 
     					username={this.state.coachesArray[i].lolUserName}
     					bio = {this.state.coachesArray[i].bio}
@@ -83,11 +88,10 @@ class VodRequest extends Component {
 					this.state.vodFormVisible
 					?
 					<div>
-						<VodRequestForm />
-						<div id="requestFormButtons" className="text-center">
-							<button id="vodRequestButton" type="submit" form="vodRequest" value="Submit">Send VOD Review Request</button>
-							<button id="requestCancelButton" form="vodRequest" onClick={this.cancelButtonClick}>Cancel</button>
-						</div>
+						<VodRequestForm lolUserName={this.state.chosenCoach} />
+							
+						<button id="requestCancelButton" className="center-block" form="vodRequest" onClick={this.cancelButtonClick}>Cancel Request</button>
+						
 					</div>
 					: null
 				}

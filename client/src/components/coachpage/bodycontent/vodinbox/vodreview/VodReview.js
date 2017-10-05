@@ -1,20 +1,55 @@
 import React, { Component } from "react"; 
 import "./VodReview.css";
+import RequestAPI from "../../../../../utils/requestAPI";
 
 class VodReview extends Component {
 	state = {
 		commentNumber: 0,
 		currentComment: 0,
-		youtubeURL: "https://www.youtube.com/embed/8PMvZS8WAhs",
 		finalReportVisible: false,
 		timeStamp: "",
 		textArea: "",
 		coachingComments: [],
 		finalButtonVisible: false,
+		overall: "",
+		improvement: "",
+		resources: "",
+		updateSent: false,
 	};
 
+	updateRequest = event => {
+    	event.preventDefault();
+
+    	if (
+    			this.state.overall && 
+    			this.state.improvement &&
+    			this.state.resources &&
+    			this.state.coachingComments.length > 0
+    		) {
+
+	      RequestAPI.updateRequest(
+	      	this.props.id,
+	      	{
+		        comments: this.state.coachingComments,
+		        finalReport: {
+		        	overall: this.state.overall,
+		        	improvement: this.state.improvement,
+		        	resources: this.state.resources
+		        },
+		        stage: "reviewed"
+	    	}
+	       )
+	        .then(res => console.log(res))
+	        .catch(err => console.log(err));
+	      this.setState({updateSent: true})
+	    }
+    }
+
 	addComment = event => {
-		
+		this.setState({
+			finalReportVisible: false,
+		});
+
 		this.state.commentNumber !== this.state.currentComment
 		?
 		this.setState({
@@ -80,8 +115,6 @@ class VodReview extends Component {
 	render(){
 		const comments = [];
 
-		let url = this.state.youtubeURL;
-
 		for (var i = 1; i <= this.state.currentComment; i++){
 			comments.push(<button type="button" className="btn btn-primary" ref="commentButton" onClick={this.commentNumberClick} key={i} value={i}>{i}</button>);
 		};
@@ -91,11 +124,11 @@ class VodReview extends Component {
 		return(
 			<div id="vodReview">
 	
-				<h4 className="text-center">Your Student's VOD: <span><u> Username </u></span></h4>
+				<h4 className="text-center">Your Student's VOD: <span><u> {this.props.student}</u></span></h4>
 
-				<h5 className="text-center">Zyra Game against Sona - September 8, 2017</h5>
+				<h5 className="text-center">{this.props.title}</h5>
 
-				<iframe ref="vidRef" className="center-block" width="80%" height="400" src={url} frameBorder="0" onClick={this.pauseVideo} title="video" allowFullScreen></iframe>
+				<iframe ref="vidRef" className="center-block" width="80%" height="400" src={this.props.url} frameBorder="0" onClick={this.pauseVideo} title="video" allowFullScreen></iframe>
 	
 				<div id="addCommentButtons">
 					<button type="button" className="btn btn-success" onClick={this.addComment}>Add Comment</button>
@@ -155,15 +188,22 @@ class VodReview extends Component {
 						<h5 className="text-center"><u>Final Report</u></h5>	
 						
 						<p>Overall Game Review:</p>
-					    <textarea id="coachingComment" rows="8"  />
+					    <textarea id="coachingComment" rows="8" name="overall" onChange={this.handleInputChange} value={this.state.overall} />
 
 					    <p>Key Areas of Improvement</p>
-					    <input type="text" />
+					    <input type="text" name="improvement" onChange={this.handleInputChange} value={this.state.improvement} />
 
 					    <p>Usefule Resources</p>
-					    <input type="text" />
+					    <input type="text" name="resources" onChange={this.handleInputChange} value={this.state.resources} />
 
+					    <button id="updateButton" type="button" className="btn btn-success center-block" onClick={this.updateRequest}>Send VOD Review</button>
 
+					    {
+					    	this.state.updateSent
+					    	?
+					    	<p id="reviewSent" className="text-center">VOD Review Sent to Student!</p>
+					    	: null
+					    }
 
 					</div>
 					: null
