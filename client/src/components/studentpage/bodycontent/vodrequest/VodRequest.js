@@ -12,14 +12,14 @@ class VodRequest extends Component {
 		vodFormVisible: false,
 		coachesArray: [],
 		studentID: "59d432b7affaf94c40bf29a7",
-		chosenCoach: "",
+		chosenCoach: ""
 	};
 
 	loadCoaches = event => {
 
 		CoachAPI.getCoaches()
 	    	.then(res =>
-        		this.setState({ coachesArray: res.data })
+        		this.setState({coachesArray: res.data})
 	    	)
 	      	.catch(err => console.log(err))
 	};

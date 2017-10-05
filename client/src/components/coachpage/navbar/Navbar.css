@@ -7,32 +7,36 @@
 	display: inline-block;
 }
 
-#navLinks{
+#coachPage #navLinks{
 	width: 50%;
 	display: inline-block;
 	margin-top: 20px;
 }
 
-#navLinks ul{
+#coachPage #navLinks ul{
 	width: 100%;
 }
 
-#navLinks ul li{
+#coachPage #navLinks ul li{
 	border-left: solid 1px white;
 	padding-right: 3px;
 	padding-left: 3px;
 	font-size: 15px;
 }
 
-#navLinks ul li:first-child{
+#coachPage #navLinks ul li:first-child{
 	border-left: none;
 	padding-left: none;
 }
 
-#navLinks ul li a{
+#coachPage #navLinks ul li a{
 	color: white;
 	padding-top: 2px;
 	padding-bottom: 2px;
+}
+
+#coachPage .nav-pills{
+	margin-left: 0;
 }
 
 #rightNavbar{
