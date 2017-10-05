@@ -52,7 +52,7 @@ class StudentVods extends Component {
 
     	for(let i = 0; i < this.state.vodsArray.length && i < 6; i++){
     		if(this.state.vodsArray[i].stage === "inbox"){
-    			return
+    			console.log(this.state.vodsArray[i].stage)
     		}
     		else{
     			vodImageArray.push(
