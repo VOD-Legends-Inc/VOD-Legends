@@ -40,3 +40,9 @@
 	color: white;
 }
 
+#finalReportDiv input{
+	margin-left: 10%;
+	width: 80%;
+	margin-bottom: 10px;
+}
+

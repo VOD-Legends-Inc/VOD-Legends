@@ -1,48 +1,92 @@
-import React from "react"; 
+import React, { Component } from "react"; 
 import "./StudentVod.css";
 
-const StudentVod = () => (
+class StudentVod extends Component {
+	state = {
+		commentsArray: this.props.comments,	
+		commentNumber: "",
+		timeStamp: "",
+		textArea: "",
+		finalReportVisible: false,
+	}
 
-<div id="studentVod">
+	commentClick = event => {
+		let {value} = event.target;
+    	let commentToShow = this.state.commentsArray[value - 1];
+    	
+    	this.setState({
+    		commentNumber: commentToShow.commentNumber,
+    		timeStamp: commentToShow.timeStamp,
+    		textArea: commentToShow.textArea,
+    		finalReportVisible: false,
+    	});
+	}
 
-	<h4>Your Chosen VOD:</h4>
+	finalReportClick = event => {
+		this.setState({finalReportVisible: true});
+	}
 
-	<h5 className="text-center">Zyra Game against Sona - September 8, 2017</h5>
+	render(){
 
-	<iframe className="center-block" width="80%" height="400" src="https://www.youtube.com/embed/8PMvZS8WAhs" frameBorder="0" title="video" allowFullScreen></iframe>
+		const commentsForButtons = [];
 
-	<div id="commentButtonBackground">
-		<h5 className="text-center"><u>Your Coach's Comments</u></h5>
-		<div id="studentCommentButtons" className="text-center">
-			<button type="button" className="btn btn-primary">1</button>
-			<button type="button" className="btn btn-primary">2</button>
-			<button type="button" className="btn btn-primary">3</button>
-			<button type="button" className="btn btn-primary">4</button>		
-			<button type="button" className="btn btn-primary">5</button>
-			<button type="button" className="btn btn-primary">6</button>
-			<button type="button" className="btn btn-primary">7</button>
-			<button type="button" className="btn btn-primary">8</button>		
-			<button type="button" className="btn btn-primary">9</button>
-			<button type="button" className="btn btn-primary">10</button>
-
-			<button type="button" className="btn btn-primary">Final Report</button>
-		</div>
-	</div>
-
-	<div id="studentVodForm">
-		<p id="commentNumber">Comment Number: <span><u> #6</u></span></p>
-		
-		<p id="studentTimeStamp">Timestamp: <span><u> 2:51</u></span></p>
-
-
-		<p>Your Coach's Comment:</p>
-	    <textarea id="coachingComment" rows="4"  />
-	</div>
-
-</div>
+		for (var i = 1; i <= this.props.comments.length; i++){
+			commentsForButtons.push(<button key={i} type="button" className="btn btn-primary" onClick={this.commentClick} value={i}>{i}</button>)
+		};
 
 
+		return(
+			<div id="studentVod">
 
-);
+				<h4>Your Chosen VOD:</h4>
+
+				<h5 className="text-center">{this.props.title}</h5>
+
+				<iframe className="center-block" width="80%" height="400" src={this.props.url} frameBorder="0" title="video" allowFullScreen></iframe>
+
+				<div id="commentButtonBackground">
+					<h5 className="text-center"><u>Your Coach's Comments</u></h5>
+					<div id="studentCommentButtons" className="text-center">
+						{commentsForButtons}
+
+						<button type="button" className="btn btn-primary" onClick={this.finalReportClick}>Final Report</button>
+					</div>
+				</div>
+				
+				{
+					!this.state.finalReportVisible
+					?
+					<div id="studentVodForm">
+						<p id="commentNumber">Comment Number: <span><u> #{this.state.commentNumber}</u></span></p>
+						
+						<p id="studentTimeStamp">Timestamp: <span><u> {this.state.timeStamp}</u></span></p>
+
+
+						<p>Your Coach's Comment:</p>
+					    <textarea id="coachingComment" rows="4" value={this.state.textArea} />
+					</div>
+					:
+					<div id="finalReportDiv">
+						
+						<h5 className="text-center"><u>Final Report</u></h5>	
+						
+						<p>Overall Game Review:</p>
+					    <textarea id="coachingComment" rows="8"  />
+
+					    <p>Key Areas of Improvement</p>
+					    <input type="text" />
+
+					    <p>Usefule Resources</p>
+					    <input type="text" />
+
+
+
+					</div>
+				}
+
+			</div>
+		)
+	}
+};
 
 export default StudentVod;

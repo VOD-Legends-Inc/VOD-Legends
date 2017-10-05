@@ -7,10 +7,13 @@ import VodAPI from "../../../../utils/requestAPI";
 
 class StudentVods extends Component {
 	state ={
+		vodID: "",
+		vodTitle: "",
+		vodUrl: "",
+		vodComments: [],
 		vodSectionVisible: true,
 		videoSectionVisible: false,
 		vodsArray: [],
-		vodSelected: "",
 	}
 
 	loadVods = event => {
@@ -29,7 +32,7 @@ class StudentVods extends Component {
 	vodImageClick = event => {
 		this.setState({vodSectionVisible: false});
 		this.setState({videoSectionVisible: true});
-		console.log(event.target);
+		console.log(this.state);
 	}
 
 	returnButtonClick = event => {
@@ -37,13 +40,25 @@ class StudentVods extends Component {
 		this.setState({videoSectionVisible: false});
 	}
 
+	finalReportClick = event => {
+		alert("this works");
+		this.setState({finalReportVisible: true});
+	}
+
 	render(){
 		let vodImageArray = [];
 
     	for(let i = 0; i < this.state.vodsArray.length && i < 6; i++){
     		vodImageArray.push(
-    			<a key={i} href="#" onClick={this.vodImageClick}>
-    				<StudentVodImage 
+    			<a key={i} href="#" onClick={(event) => { 
+    				this.setState({vodID: this.state.vodsArray[i]._id});
+    				this.setState({vodTitle: this.state.vodsArray[i].titleOfVOD});
+    				this.setState({vodUrl: this.state.vodsArray[i].vodURL});
+    				this.setState({vodComments: this.state.vodsArray[i].comments});
+    				this.vodImageClick();
+					}
+				}>
+    				<StudentVodImage
     					key={i}
     					_id={this.state.vodsArray[i]._id}
     					title={this.state.vodsArray[i].titleOfVOD}
@@ -72,12 +87,15 @@ class StudentVods extends Component {
 					this.state.videoSectionVisible
 					?
 					<div>
-						<StudentVod />
-						<button type="button" className="btn btn-success center-block" onClick={this.returnButtonClick}>Return to Your VODs</button>
+						<StudentVod 
+							title={this.state.vodTitle}
+							url={this.state.vodUrl}
+							comments={this.state.vodComments}
+						/>
+						<button type="button" className="btn btn-success center-block" onClick={this.returnButtonClick}>Return to Your VODs</button>				
 					</div>
 					: null	
-				}
-				
+				}	
 
 			</div>			
 		)
