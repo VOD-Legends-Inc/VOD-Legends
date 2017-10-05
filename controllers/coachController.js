@@ -22,7 +22,7 @@ module.exports = {
     db.Coaches
       .create(req.body)
       .then(dbModel => {
-        console.log(dbModel);
+        console.log(req.body);
         res.json(dbModel)
       })
       .catch(err => res.status(422).json(err));

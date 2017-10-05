@@ -36,8 +36,9 @@ state = {
         bio: this.state.bio,
         password: this.state.password
       })
-        .then()
+        .then(window.location.href ="/student")
         .catch(err => console.log(err));
+        console.log(this.state);
     }
   };
 

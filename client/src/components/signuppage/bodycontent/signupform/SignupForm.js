@@ -40,7 +40,7 @@ state = {
         bio: this.state.bio,
         password: this.state.password
       })
-        .then()
+        .then(window.location.href ="/coach")
         .catch(err => console.log(err));
         console.log(this.state);
     }
@@ -108,6 +108,16 @@ state = {
 		                onChange={this.handleInputChange}
 		                name="lastName"
 		                placeholder="Last Name (required)"
+	              	/>
+              </div>
+
+              <div className="form-group">
+              	<label htmlFor="mainChampion">Main Champion:</label>
+	              	<input className="form-control"
+		                value={this.state.mainChampion}
+		                onChange={this.handleInputChange}
+		                name="mainChampion"
+		                placeholder="Character Type"
 	              	/>
               </div>
 
