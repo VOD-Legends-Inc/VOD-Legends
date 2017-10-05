@@ -3,18 +3,18 @@ import axios from "axios";
 export default {
   // Gets all coaches
   getCoaches: function() {
-    return axios.get("/api/coach");
+    return axios.get("/api/coaches");
   },
   // Gets the coach with the given id
   getCoach: function(id) {
-    return axios.get("/api/coach/" + id);
+    return axios.get("/api/coaches/" + id);
   },
   // Deletes the coach with the given id
   deleteCoach: function(id) {
-    return axios.delete("/api/coach/" + id);
+    return axios.delete("/api/coaches/" + id);
   },
   // Saves a coach to the database
   saveCoach: function(coachData) {
-    return axios.post("/api/coach", coachData);
+    return axios.post("/api/coaches", coachData);
   }
 };

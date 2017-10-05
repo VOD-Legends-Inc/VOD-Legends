@@ -140,7 +140,7 @@ state = {
               	type="submit" 
               	className="btn btn-primary"
                 disabled={!(this.state.firstName && this.state.lastName && this.state.lolUserName && this.state.password)}
-                onClick={this.handleFormSubmit}>
+                onClick={(event) => this.handleFormSubmit(event)}>
                 Submit
                 </button>
             </form>

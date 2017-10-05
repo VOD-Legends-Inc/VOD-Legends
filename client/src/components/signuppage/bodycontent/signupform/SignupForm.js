@@ -42,6 +42,7 @@ state = {
       })
         .then()
         .catch(err => console.log(err));
+        console.log(this.state);
     }
   };
 
@@ -73,6 +74,7 @@ state = {
               <div className="form-group">
               	<label htmlFor="password">Password:</label>
 	              	<input className="form-control"
+	              		type="password"
 		                value={this.state.password}
 		                onChange={this.handleInputChange}
 		                name="password"
@@ -88,7 +90,7 @@ state = {
                     placeholder="Password (required)"
                   />
               </div>
-              
+
               <div className="form-group">
               	<label htmlFor="firstName">First Name:</label>
 	              	<input className="form-control"
@@ -153,7 +155,7 @@ state = {
               	type="submit" 
               	className="btn btn-primary"
                 disabled={!(this.state.firstName && this.state.lastName && this.state.lolUserName && this.state.password)}
-                onClick={this.handleFormSubmit}>
+                onClick={(event) => this.handleFormSubmit(event)}>
                 Submit
                 </button>
             </form>
