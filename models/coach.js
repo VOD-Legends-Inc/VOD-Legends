@@ -13,7 +13,8 @@ const coachSchema = new Schema({
   language: { type: String, required: true },
   rating: String,
   bio: String,
-  password: { type: String, required: true }
+  password: { type: String, required: true },
+  studentsArray: Array
 });
 
 const Coach = mongoose.model("Coaches", coachSchema);

@@ -50,3 +50,18 @@
   	-moz-border-radius: 5px;
  	 border-radius: 5px;
 }
+
+
+
+#vodRequestButton{
+	color: white;
+	border: solid 1px white;
+	-webkit-border-radius: 5px;
+    border-radius: 5px;
+    margin-top: 10px;
+    text-align: center;
+}
+
+#sent{
+	color: white;
+}

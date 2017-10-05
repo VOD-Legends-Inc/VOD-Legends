@@ -50,7 +50,9 @@ const coachSeed = [
       language : "English",
       rating : "8.2",
       bio : "Masters tier coach at your service! Escape from ELO hell!",
-      password : "password2"
+      password : "password2",
+      studentsArray: ["azianpinoy"
+      ]
   },
   {
       firstName : "Is",
@@ -143,6 +145,7 @@ db.Students
     titleOfVOD : "Zyra Game #1",
     vodURL : "https://www.youtube.com/embed/8PMvZS8WAhs",
     messageToCoach : "hey coach!",
+    stage: "reviewed",
     comments : [ 
         {
             "commentNumber" : 1,
@@ -194,7 +197,12 @@ db.Students
             "timeStamp" : "42:22",
             "textArea" : "Comment 10"
         }
-    ]
+    ],
+    finalReport: {
+      overall: "Stop Being a Noob!",
+      improvement: "Get Good!",
+      resources: "google"
+    }
   },
   {
     student : "Azianpinoy",
@@ -202,6 +210,7 @@ db.Students
     titleOfVOD : "Zyra Game #2",
     vodURL : "https://www.youtube.com/embed/8PMvZS8WAhs",
     messageToCoach : "hey coach!",
+    stage: "reviewed",
     comments : [ 
         {
             "commentNumber" : 1,
@@ -253,7 +262,12 @@ db.Students
             "timeStamp" : "42:22",
             "textArea" : "Comment 10"
         }
-    ]
+    ],
+    finalReport: {
+      overall: "Stop Being a Noob!",
+      improvement: "Get Good!",
+      resources: "google"
+    }
   },
   {
     student : "Azianpinoy",
@@ -261,6 +275,7 @@ db.Students
     titleOfVOD : "Zyra Game #3",
     vodURL : "https://www.youtube.com/embed/8PMvZS8WAhs",
     messageToCoach : "hey coach!",
+    stage: "reviewed",
     comments : [ 
         {
             "commentNumber" : 1,
@@ -312,7 +327,12 @@ db.Students
             "timeStamp" : "42:22",
             "textArea" : "Comment 10"
         }
-    ]
+    ],
+    finalReport: {
+      overall: "Stop Being a Noob!",
+      improvement: "Get Good!",
+      resources: "google"
+    }
   },
   {
     student : "Azianpinoy",
@@ -320,6 +340,7 @@ db.Students
     titleOfVOD : "Zyra Game #4",
     vodURL : "https://www.youtube.com/embed/8PMvZS8WAhs",
     messageToCoach : "hey coach!",
+    stage: "reviewed",
     comments : [ 
         {
             "commentNumber" : 1,
@@ -371,7 +392,12 @@ db.Students
             "timeStamp" : "42:22",
             "textArea" : "Comment 10"
         }
-    ]
+    ],
+    finalReport: {
+      overall: "Stop Being a Noob!",
+      improvement: "Get Good!",
+      resources: "google"
+    }
   },
   {
     student : "Azianpinoy",
@@ -379,6 +405,7 @@ db.Students
     titleOfVOD : "Zyra Game #5",
     vodURL : "https://www.youtube.com/embed/8PMvZS8WAhs",
     messageToCoach : "hey coach!",
+    stage: "reviewed",
     comments : [ 
         {
             "commentNumber" : 1,
@@ -430,7 +457,12 @@ db.Students
             "timeStamp" : "42:22",
             "textArea" : "Comment 10"
         }
-    ]
+    ],
+    finalReport: {
+      overall: "Stop Being a Noob!",
+      improvement: "Get Good!",
+      resources: "google"
+    }
   },
   {
     student : "Azianpinoy",
@@ -438,6 +470,7 @@ db.Students
     titleOfVOD : "Zyra Game #6",
     vodURL : "https://www.youtube.com/embed/8PMvZS8WAhs",
     messageToCoach : "hey coach!",
+    stage: "reviewed",
     comments : [ 
         {
             "commentNumber" : 1,
@@ -489,7 +522,12 @@ db.Students
             "timeStamp" : "42:22",
             "textArea" : "Comment 10"
         }
-    ]
+    ],
+    finalReport: {
+      overall: "Stop Being a Noob!",
+      improvement: "Get Good!",
+      resources: "google"
+    }
   },
 ];
 console.log(requestSeed);
