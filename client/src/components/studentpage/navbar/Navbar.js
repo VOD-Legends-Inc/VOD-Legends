@@ -7,7 +7,7 @@ const Navbar = () => (
     <div id="headerContainer" className="container-fluid">
   
       <div id="leftNavbar">
-        <img src="./images/logo.png" />
+        <a href="/student"><img src="./images/logo.png" alt="logoImage" /></a>
       </div>
 
       <div id="navLinks">
@@ -24,9 +24,9 @@ const Navbar = () => (
           <button className="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Username
           <span className="caret"></span></button>
           <ul className="dropdown-menu">
-            <li><a href="#">TBD #1</a></li>
-            <li><a href="#">TDD #2</a></li>
-            <li><a href="#">TBD #3</a></li>
+            <li><a href="">TBD #1</a></li>
+            <li><a href="">TDD #2</a></li>
+            <li><a href="">TBD #3</a></li>
           </ul>
         </div>
       </div>

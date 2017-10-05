@@ -1,5 +1,5 @@
 module.exports = {
 	Coaches: require("./coach"),
-	Student: require("./students"),
-	Request: require("./requests")
+	Students: require("./student"),
+	Requests: require("./request")
 };

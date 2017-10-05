@@ -1,0 +1,17 @@
+#loginform {
+    margin-left: 40%;
+    margin-right: 20%;
+    opacity: 0.9;
+    background: silver;
+    border-radius: 35px;
+    border-style: solid;
+    padding: 50px;
+    padding-top: 20px;
+    width: 400px;
+    margin-top: 55px;
+};
+
+h1{
+    font-size: 36px;
+    color: #337ab7;
+};

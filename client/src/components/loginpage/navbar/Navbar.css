@@ -1,0 +1,53 @@
+#leftNavbar img{
+	height: 50px;
+}
+
+#leftNavbar{
+	width: 25%;
+	display: inline-block;
+}
+
+#navLinks{
+	width: 50%;
+	display: inline-block;
+	margin-top: 20px;
+}
+
+#navLinks ul{
+	width: 100%;
+}
+ul.nav.nav-pills {
+    margin-left: 375px;
+}
+#navLinks ul li{
+	border-left: solid 1px white;
+	padding-right: 3px;
+	padding-left: 3px;
+	font-size: 15px;
+}
+
+#navLinks ul li:first-child{
+	border-left: none;
+	padding-left: none;
+}
+
+#navLinks ul li a{
+	color: white;
+	padding-top: 2px;
+	padding-bottom: 2px;
+}
+
+#rightNavbar{
+	width: 25%;
+	display: inline-block;
+	text-align: right;
+}
+
+.btn .caret{
+	margin-left: 5px;
+}
+
+.dropdown button{
+	background-color: transparent;
+	border: none;
+}

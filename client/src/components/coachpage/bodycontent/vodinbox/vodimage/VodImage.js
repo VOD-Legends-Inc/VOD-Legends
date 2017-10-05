@@ -1,28 +1,18 @@
-import React, { Component } from "react";
+import React from "react";
 
-class VodImage extends Component {
+const VodImage = props => (
 
-  clickVodImage() {
-  	alert("this works")
-  }
+	<div className="vodImage">
+		<h5 id="topVodImage">{props.title}</h5>
+		<img src="./images/charIcons/karma.png" alt="characterimage" />
+		<div id="bottomVodImage">
+			<h5>Coach: {props.coach}</h5>
+			<h5>Student: {props.student}</h5>
+		</div>
+		
+	</div>
+	
+);
+  
 
-  render() {
-    return (
-    	<a href="#" onClick={this.clickVodImage}>
-	    	<div className="vodImage">
-				<div className="container-fluid">
-					<br/>	
-					<h5 className="text-center">Vod Title: Zyra Game against Sona</h5>
-					<h5 className="text-center">Date: September 8, 2017</h5>
-					<br/>
-					<h5 className="text-center">Character: Zyra</h5>
-					<h5 className="text-center">Role: Support</h5>
-					<br/>
-					<h5 className="text-center">From Student: Azianpinoy</h5>
-				</div>
-			</div>
-		</a>		
-    );
-  }
-}
 export default VodImage;

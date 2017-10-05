@@ -14,3 +14,12 @@
 #coachVod button{
 	margin-bottom: 10px;
 }
+
+#coachVodCommentBackground{
+	border: solid 1px white;
+	width: 80%;
+	margin-left: 10%;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	background-color: #3a3a3d;
+}

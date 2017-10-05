@@ -17,8 +17,11 @@ module.exports = {
   },
   create: function(req, res) {
     db.Students
-      .create(req.body)
-      .then(dbModel => res.json(dbModel))
+      create(req.body)
+      .then(dbModel => {
+        console.log(req.body);
+        res.json(dbModel)
+      })
       .catch(err => res.status(422).json(err));
   },
   update: function(req, res) {

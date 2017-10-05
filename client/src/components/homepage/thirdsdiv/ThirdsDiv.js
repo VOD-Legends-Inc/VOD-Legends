@@ -7,13 +7,13 @@ const ThirdsDiv = () => (
       
       <div className="row">
         <div className="col-sm-4 col-md-4 col-lg-4">
-          <img className="triImage center-block" src="http://lorempixel.com/150/150/sports" />
+          <img className="triImage center-block" alt="featureImage" src="http://lorempixel.com/150/150/sports" />
         </div>
         <div className="col-sm-4 col-md-4 col-lg-4">
-          <img className="triImage center-block" src="http://lorempixel.com/150/150/cats" />
+          <img alt="featureImage" className="triImage center-block" src="http://lorempixel.com/150/150/cats" />
         </div>
         <div className="col-sm-4 col-md-4 col-lg-4">
-          <img className="triImage center-block" src="http://lorempixel.com/150/150/" />
+          <img alt="featureImage" className="triImage center-block" src="http://lorempixel.com/150/150/" />
         </div>
       </div>
 

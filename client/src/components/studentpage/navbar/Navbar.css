@@ -7,32 +7,37 @@
 	display: inline-block;
 }
 
-#navLinks{
+#studentPage #navLinks{
 	width: 50%;
 	display: inline-block;
 	margin-top: 20px;
+	margin-left: 0;
 }
 
-#navLinks ul{
+#studentPage #navLinks ul{
 	width: 100%;
 }
 
-#navLinks ul li{
+#studentPage #navLinks ul li{
 	border-left: solid 1px white;
 	padding-right: 3px;
 	padding-left: 3px;
 	font-size: 15px;
 }
 
-#navLinks ul li:first-child{
+#studentPage #navLinks ul li:first-child{
 	border-left: none;
 	padding-left: none;
 }
 
-#navLinks ul li a{
+#studentPage #navLinks ul li a{
 	color: white;
 	padding-top: 2px;
 	padding-bottom: 2px;
+}
+
+#studentPage .nav-pills{
+	margin-left: 0;
 }
 
 #rightNavbar{

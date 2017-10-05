@@ -1,0 +1,21 @@
+#studentNavButtons{
+	margin-left: 10%;
+}
+
+
+#studentNavButtons button{
+	margin-right: 10px;
+	margin-bottom: 20px;
+	background-color: grey;
+}
+
+#studentVodNavButtons{
+	margin-left: 10%;
+}
+
+
+#studentVodNavButtons button{
+	margin-right: 10px;
+	margin-bottom: 20px;
+	background-color: grey;
+}

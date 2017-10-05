@@ -6,15 +6,15 @@ const FooterDiv = () => (
   	<div id="footerContainer" className="container-fluid">
   
       <div id="leftFooter">
-        <img src="./images/vl.png" />
+        <img src="./images/vl.png" alt="logoImage" />
       </div>
 
       <div id="footerLinks">
         <ul>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Contact</a></li>
-          <li><a href="#">Terms of Use</a></li>
-          <li><a href="#">Become a Coach</a></li>
+          <li><a href="">About</a></li>
+          <li><a href="">Contact</a></li>
+          <li><a href="">Terms of Use</a></li>
+          <li><a href="">Become a Coach</a></li>
         </ul>  
       </div>
 

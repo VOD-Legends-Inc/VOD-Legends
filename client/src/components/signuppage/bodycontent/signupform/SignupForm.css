@@ -1,0 +1,18 @@
+#signup-form {
+    margin-left: 30%;
+    margin-right: 20%;
+    margin-bottom: 10%;
+    opacity: 0.9;
+    background: silver;
+    border-radius: 35px;
+    border-style: solid;
+    padding: 50px;
+    padding-top: 20px;
+    width: 700px;
+    margin-top: 6%;
+};
+
+h1{
+    font-size: 36px;
+    color: #337ab7;
+};

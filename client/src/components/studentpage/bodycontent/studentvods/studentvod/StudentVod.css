@@ -6,6 +6,7 @@
 
 #studentVod h5{
 	color: white;
+	font-size: 20px;
 }
 
 #studentVod button{
@@ -15,3 +16,33 @@
 #studentCommentButtons button{
 	margin-left: 	10px;
 }
+
+#studentVodForm{
+	border: solid 1px white;
+	width: 80%;
+	margin-left: 10%;
+	margin-bottom: 20px;
+	padding-top: 15px;
+	background-color: #3a3a3d;
+}
+
+#commentButtonBackground{
+	border: solid 1px white;
+	width: 80%;
+	margin-left: 10%;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	background-color: #3a3a3d;
+}
+
+#commentButtonBackground h5{
+	font-size: 15px;
+	color: white;
+}
+
+#finalReportDiv input{
+	margin-left: 10%;
+	width: 80%;
+	margin-bottom: 10px;
+}
+
