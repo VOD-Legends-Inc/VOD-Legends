@@ -1,0 +1,7 @@
+#bodyContent{ 
+	min-height: 500px;
+	border: 1px solid #d0cdcd;	
+	background: url("images/vod-background2.jpg");
+	margin-bottom: 20px;
+    box-shadow: 6px 6px 3px #888888;
+}
