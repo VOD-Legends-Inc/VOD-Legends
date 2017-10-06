@@ -17,7 +17,7 @@ app.use(routes);
 mongoose.Promise = global.Promise;
 // Connect to the Mongo DB
 mongoose.connect(
-  process.env.mongolab-round-77838 || "mongodb://localhost/vodLegends",
+  process.env.MONGODB_URI || "mongodb://localhost/vodLegends",
   {
     useMongoClient: true
   }
