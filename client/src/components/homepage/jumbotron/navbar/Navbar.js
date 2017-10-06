@@ -15,18 +15,6 @@ class Navbar extends Component {
         loginUsername: "",
     };
 
-    signupClick = event => {
-        alert("this worked");
-    }
-
-    coachClick = event => {
-        alert("this worked");
-    }
-
-    loginClick = event => {
-        alert("this worked");
-    }
-
 
     handleInputChange = event => {
         const {name, value} = event.target;
@@ -52,24 +40,25 @@ class Navbar extends Component {
                             
                             <li>
 
-                                <button id="becomeCoachButton" onClick={this.coachClick}>Become a Coach</button>
-                                
+                                <a href="/coachSignup">
+                                    <button id="becomeCoachButton" onClick={this.coachClick} className="btn btn-primary">Become a Coach</button>
+                                </a>
                                 
 
                             </li>
 
                             <li>
-
-                                <button id="signupModalButton" onClick={this.signupClick}>Sign Up</button>
-                                
+                                <a href="/studentSignup">
+                                    <button id="signupModalButton" className="btn btn-primary" onClick={this.signupClick}>Sign Up</button>
+                                </a>
                                 
 
                             </li>
                             
                             <li>
-
-                                <button id="loginModalButton" onClick={this.loginClick}>Login</button>
-
+                                <a href="/login">
+                                    <button id="loginModalButton" onClick={this.loginClick} className="btn btn-primary">Login</button>
+                                </a>
                                 
 
                             </li>

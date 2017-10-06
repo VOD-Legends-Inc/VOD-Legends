@@ -1,9 +1,5 @@
-#signupModal{
-	width: 90%;
-	background-color: lightgrey;
-}
-
-#loginModal{
-	width: 90%;
-	background-color: lightgrey;
+.jumbotron .btn {
+    background-color: #ffcf00;
+    border-color: #b67d47;
+    color: black;
 }

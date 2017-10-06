@@ -4,7 +4,7 @@ import "./Jumbotron.css";
 
 const Jumbotron = () => (
   <div className="jumbotron">
-    <Navbar/>
+    <Navbar/><br/><br/><br/><br/>
 
     <h1 className="text-center">Improve Your Skills!</h1>
     <p className="text-center">

@@ -6,3 +6,17 @@
 .sectionDiv{
 	border-top: solid 1px lightgrey;
 }
+
+#pricingDiv h3{
+	border: solid 1px black;
+	width: 80%;
+	margin-left: 10%;
+	color: orange;
+	background-color: rgb(33,34,33);
+}
+
+#pricingDiv{
+	padding-bottom: 30px;
+	background-color: grey;
+	border-bottom: solid 1px black;
+}

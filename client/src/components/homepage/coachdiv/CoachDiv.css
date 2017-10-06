@@ -1,3 +1,16 @@
 .sectionDiv{
 	border-top: solid 1px lightgrey;
 }
+
+#coachDiv{
+	background-color: silver;
+	padding-bottom: 20px;
+	border-top: solid 1px black;
+	border-bottom: solid 1px black;
+}
+
+#coachDiv button{
+	background-color: #ffcf00;
+    border-color: #b67d47;
+    color: black;
+}
