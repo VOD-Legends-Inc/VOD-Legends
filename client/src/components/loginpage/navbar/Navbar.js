@@ -19,11 +19,8 @@ const Navbar = () => (
 
       <div id="rightNavbar">
         <div className="dropdown">
-          <button className="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Login
+          <button className="btn btn-primary dropdown-toggle" type="button" href="/login">Login
           <span className="caret"></span></button>
-          <ul className="dropdown-menu">
-            <li><a href="/">Sign Out</a></li>
-          </ul>
         </div>
       </div>
                        

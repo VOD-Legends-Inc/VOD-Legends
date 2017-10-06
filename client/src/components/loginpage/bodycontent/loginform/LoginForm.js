@@ -70,13 +70,13 @@ render() {
 				  </div>
 
 				  <button type="submit" 
-				  	className="btn btn-primary"
+				  	className="btn btn-primary send"
 				  	disabled={!(this.state.email && this.state.password)}
 				  	onClick={(event) => this.handleCoachSubmit(event)}
 				  >Coach SignIn
 				  </button>
 				  <button type="submit" 
-				  	className="btn btn-primary"
+				  	className="btn btn-primary send"
 				  	disabled={!(this.state.email && this.state.password)}
 				  	onClick={(event) => this.handleStudentSubmit(event)}
 				  >Student SignIn
