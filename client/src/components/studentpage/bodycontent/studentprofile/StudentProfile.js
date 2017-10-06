@@ -1,11 +1,28 @@
 import React, { Component } from "react"; 
 import "./StudentProfile.css";
+import StudentAPI from "../../../../utils/studentAPI";
 
 export default class StudentProfile extends Component {
-			state = {
+		state = {
 			editButtonSelected: false,
-			disabled: true
+			disabled: true,
+			studentID: "59d65ee217664a80bc6556c3",
+			studentData: []
 		}
+
+		loadStudent = event => {
+
+			StudentAPI.getStudent(this.state.studentID)
+			    	.then(res =>
+		        		this.setState({studentData: res.data})
+			    	)
+			      	.catch(err => console.log(err))
+			console.log(this.state)
+		};
+
+		componentDidMount() {
+	    	this.loadStudent();
+	  	};
 
 		editClick = event => {
 			this.setState({disabled: false})
@@ -21,53 +38,31 @@ export default class StudentProfile extends Component {
 					<div id="student">
 
 						<h4>Your Student Profile</h4>
-						<img id="profilePic" className="center-block" src="http://lorempixel.com/400/200" alt="prof" />
-						<div id="editProfilePic">
-							<div className="text-center">Edit Profile Picture: </div> 
-							<input type="file" id="myFile" />
-					 	</div>	
-						<br />
+						<img id="profilePic" className="center-block" src="./images/empty_profile.png" alt="prof" />
+						
 
 						<div className="col-sm-6 col-md-6 col-lg-6">
 
-							<label /> First Name
-							<input id="firstName" className="profileText form-control" disabled={this.state.disabled} type="text" />
+							<label> First Name</label>
+							<input id="firstName" className="profileText form-control" disabled={this.state.disabled} type="text" value={this.state.studentData.firstName} />
 						
 						</div>
 
 						<div className="col-sm-6 col-md-6 col-lg-6">
 
-							<label /> Last Name
-							<input id="lastName" className="profileText form-control" disabled={this.state.disabled} type="text" />
+							<label> Last Name </label>
+							<input id="lastName" className="profileText form-control" disabled={this.state.disabled} type="text" value={this.state.studentData.lastName} />
 
 						</div>
 						
-							<label /> Username
-							<input id="userName" className="profileText form-control" disabled={this.state.disabled} type="text" />
+							<label> Username </label>
+							<input id="userName" className="profileText form-control" disabled={this.state.disabled} type="text" value={this.state.studentData.lolUserName} />
 
-							<label /> Email
-							<input id="email" className="profileText form-control" disabled={this.state.disabled} type="Email" />
+							<label> Role</label>
+							<input id="role" className="profileText form-control" disabled={this.state.disabled} type="text"  value={this.state.studentData.role}/>
 
-							<label /> Location
-							<input id="location" className="profileText form-control" disabled={this.state.disabled} type="text" />
-
-							<label /> Role
-							<input id="role" className="profileText form-control" disabled={this.state.disabled} type="text" />
-
-							<label /> ELO
-							<input id="elo" className="profileText form-control" disabled="true" type="text" />
-
-							<label /> server
-							<input id="server" className="profileText form-control" disabled={this.state.disabled} type="text" />
-
-							<label /> Main Champion
-							<input id="userName" className="profileText form-control" disabled={this.state.disabled} type="text" />
-
-							<label /> Languages
-							<input id="language" className="profileText form-control" disabled={this.state.disabled} type="text" />
-
-							<label /> Bio
-							<textarea id="bio" className="profileText form-control" disabled={this.state.disabled} rows="5" type="text"></textarea>
+							<label> Bio </label>
+							<textarea id="bio" className="profileText form-control" disabled={this.state.disabled} rows="5" type="text" value={this.state.studentData.bio}></textarea>
 
 							<br />
 							<button onClick={this.editClick} type="button" id="editButton" className="btn-primary btn center-block">Edit Profile</button>

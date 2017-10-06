@@ -80,7 +80,7 @@ class VodInbox extends Component {
 							<h4>Your VOD Request Inbox</h4>
 
 							<div id="vodImages">
-								
+							
 									{vodImageArray}
 								
 								
