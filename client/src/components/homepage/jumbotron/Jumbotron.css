@@ -1,8 +1,14 @@
 /* JUMBOTRON & HEADER SECTION */
 .jumbotron{
+	margin-bottom: 0px;
+    background-image: url(jumbo.jpg);
+    background-position: 0% 25%;
+    background-size: cover;
+    background-repeat: no-repeat;
 	width: 100%;
 	padding-top: 16px;
 	margin-bottom: 0px;
+
 }
 
 .container-fluid{

@@ -5,4 +5,15 @@
 
 .sectionDiv{
 	border-top: solid 1px lightgrey;
+	background-image: "leagueCast.jpg";
+}
+.size3{
+	background-image: url("leagueCast.jpg");
+	background-position: 0% 25%;
+    background-size: cover;
+    background-repeat: no-repeat;
+	width: 100%;
+	height: 100%;
+	padding-top: 16px;
+	margin-bottom: 0px;
 }

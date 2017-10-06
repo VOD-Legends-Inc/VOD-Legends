@@ -1,8 +1,18 @@
 .triImage{
 	margin-top: 20px;
-	border: solid 1px lightgrey;
-}
 
+	height: 230px;
+	width: 230px;
+}
+.triImage2{
+	margin-top: 40px;
+/* 	border: solid 1px lightgrey; */
+}
 .sectionDiv{
 	border-top: solid 1px lightgrey;
+	/* background-color:  #666666; */
+	/* background-color: #333300; */
+	 /* background-color: #c2c2d6; */
+	 /*  background-color: #9494b8; */
+	 background-color: #3d3d5c;
 }

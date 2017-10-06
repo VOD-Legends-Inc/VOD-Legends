@@ -4,10 +4,13 @@ import "./Jumbotron.css";
 
 const Jumbotron = () => (
   <div className="jumbotron">
-    <Navbar/>
 
+    <Navbar />
+
+    <img className="center-block" src="./images/vodlg.png" alt="vodlg" />
+    
     <h1 className="text-center">Improve Your Skills!</h1>
-    <p className="text-center">
+	<p className="text-center">
       Submit your VOD today <br/>
       and receive Diamond level review and analysis.
     </p>

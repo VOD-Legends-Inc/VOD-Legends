@@ -43,7 +43,7 @@ class Navbar extends Component {
               
                   <div className="col-sm-6 col-md-6 col-lg-6">
                       <div className='navbar-header brand-name'>
-                        <img src="./images/vodlg.png" alt="logoImage" />
+                        <img src="./images/vodsym1.png" alt="logoImage" />
                       </div>
                   </div>
 

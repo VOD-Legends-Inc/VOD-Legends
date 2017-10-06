@@ -2,7 +2,7 @@ import React from "react";
 import "./RegisterDiv.css";
 
 const RegisterDiv = () => (
-  <div className="sectionDiv text-center">
+  <div className="sectionDiv text-center size3">
     <h2>Get out of ELO Hell! Submit your VOD for Review Now!</h2>
     <button>Register Now</button>
 

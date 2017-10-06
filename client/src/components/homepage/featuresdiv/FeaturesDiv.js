@@ -2,7 +2,7 @@ import React from "react";
 import "./FeaturesDiv.css";
 
 const FeaturesDiv = () => (
-  <div className="sectionDiv">
+  <div className="sectionDiv sectionDiv2">
     <div className="container">
       
       <div className="row">
@@ -11,13 +11,13 @@ const FeaturesDiv = () => (
           <p>Our easy-to-use VOD Review Interface allows students to view the exact moments in the game a coaches comment is related to. Additionally, our built-in messaging system makes it so asking your coach a question is quick and simple!</p>
         </div>
         <div className="col-sm-6 col-md-6 col-lg-6">
-          <img className="triImage center-block" alt="featureImage" src="http://lorempixel.com/150/150/cats" />
+          <img className="triImage size2 center-block" alt="featureImage" src="./images/growinglinechart.jpg" />
         </div>
       </div>
 
       <div className="row">
         <div className="col-sm-6 col-md-6 col-lg-6 text-center">
-          <img className="triImage center-block" alt="featureImage" src="http://lorempixel.com/150/150/cats" />
+          <img className="triImage center-block" alt="featureImage" src="./images/VODpicture.jpg" />
 
         </div>
         <div className="col-sm-6 col-md-6 col-lg-6 text-center">
