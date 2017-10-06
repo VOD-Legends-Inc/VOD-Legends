@@ -2,7 +2,7 @@ import axios from "axios";
 
 export default {
   // Gets all students
-  getStudent: function() {
+  getStudents: function() {
     return axios.get("/api/students");
   },
   // Gets the student with the given id

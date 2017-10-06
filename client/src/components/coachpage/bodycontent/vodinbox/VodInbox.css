@@ -73,3 +73,8 @@ iframe{
 #returnButton:hover{
 	opacity: .8;
 }
+
+#empty{
+	border-bottom: none !important;
+	margin-left: 2% !important;
+}
