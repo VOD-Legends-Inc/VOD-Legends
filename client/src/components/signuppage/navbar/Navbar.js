@@ -22,7 +22,7 @@ const Navbar = () => (
           <button className="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Username
           <span className="caret"></span></button>
           <ul className="dropdown-menu">
-            <li><a href="#">Sign Out</a></li>
+            <li><a href="/">Sign Out</a></li>
           </ul>
         </div>
       </div>
