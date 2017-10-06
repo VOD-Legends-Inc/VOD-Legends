@@ -4,9 +4,34 @@ import "./LoginForm.css";
 
 class LoginForm extends Component {
 	state = {
-			email: {},
-			password: {}
+			email: "",
+			password: "",
+			coach: "",
+			student: "",
 		};
+
+componentDidMount() {
+  }
+
+  handleInputChange = event => {
+    const { name, value } = event.target;
+    this.setState({
+      [name]: value
+    });
+  };
+
+  handleCoachSubmit = event => {
+    event.preventDefault();
+    if (this.state.email && this.state.password) {
+    	return(window.location.href ="/coach")
+      }
+  };
+  handleStudentSubmit = event => {
+    event.preventDefault();
+    if (this.state.email && this.state.password) {
+    	return(window.location.href ="/student")
+      }
+  };
 
 render() {
 	return (
@@ -15,13 +40,26 @@ render() {
 				<form>
 				  <div className="form-group">
 				    <label htmlFor="exampleInputEmail1">Email address</label>
-				    <input type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email"/>
+				    	<input type="email" 
+					    	className="form-control"
+					    	name="email" 
+					    	value={this.state.email}
+					    	onChange={this.handleInputChange} 
+					    	aria-describedby="emailHelp" 
+					    	placeholder="Enter email"
+					    />
 				    <small id="emailHelp" className="form-text text-muted">We'll never share your email with anyone else.</small>
 				  </div>
 
 				  <div className="form-group">
 				    <label htmlFor="exampleInputPassword1">Password</label>
-				    <input type="password" className="form-control" id="exampleInputPassword1" placeholder="Password"/>
+				    	<input type="password" 
+						    className="form-control"
+						    name="password" 
+						    value={this.state.password}
+					    	onChange={this.handleInputChange}  
+						    placeholder="Password"
+				    	/>
 				  </div>
 
 				  <div className="form-check">
@@ -31,7 +69,18 @@ render() {
 				    </label>
 				  </div>
 
-				  <button type="submit" className="btn btn-primary">Submit</button>
+				  <button type="submit" 
+				  	className="btn btn-primary"
+				  	disabled={!(this.state.email && this.state.password)}
+				  	onClick={(event) => this.handleCoachSubmit(event)}
+				  >Coach SignIn
+				  </button>
+				  <button type="submit" 
+				  	className="btn btn-primary"
+				  	disabled={!(this.state.email && this.state.password)}
+				  	onClick={(event) => this.handleStudentSubmit(event)}
+				  >Student SignIn
+				  </button>
 				</form>
 		</div>
 		);
