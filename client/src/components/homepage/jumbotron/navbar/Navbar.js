@@ -49,7 +49,7 @@ class Navbar extends Component {
 
                     <div className="col-sm-6 col-md-6 col-lg-6">
                         <ul className="nav navbar-nav navbar-right">
-                            
+                            <img src="signupButton" id="signupModalButton" onClick={this.signupClick} />
                             <li>
 
                                 <button id="becomeCoachButton" onClick={this.coachClick}>Become a Coach</button>
@@ -61,7 +61,7 @@ class Navbar extends Component {
                             <li>
 
                                 <button id="signupModalButton" onClick={this.signupClick}>Sign Up</button>
-                                
+                                {/*<img src="signupButton" id="signupModalButton" onClick={this.signupClick} />*/}
                                 
 
                             </li>

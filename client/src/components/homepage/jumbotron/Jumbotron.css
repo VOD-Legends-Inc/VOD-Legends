@@ -23,3 +23,12 @@
 	background-color: transparent;
 	border: none;
 }
+.textwhite{
+	color: white !important;
+}
+.textyellow{
+	color: yellow !important;
+}
+.textborder{
+	text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+}
