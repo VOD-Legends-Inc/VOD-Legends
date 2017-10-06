@@ -3,6 +3,14 @@
 	width: 100%;
 	padding-top: 16px;
 	margin-bottom: 0px;
+	background-image: url("./jumbo.jpg");
+	min-height: 600px;
+	color: #ffcf00;
+	text-shadow:
+    -2px -2px 0 black,
+    2px -2px 0 black,
+    -2px 2px 0 black,
+    2px 2px 0 black;
 }
 
 .container-fluid{

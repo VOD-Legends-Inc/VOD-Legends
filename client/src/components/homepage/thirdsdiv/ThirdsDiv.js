@@ -2,18 +2,18 @@ import React from "react";
 import "./ThirdsDiv.css";
 
 const ThirdsDiv = () => (
-  <div className="sectionDiv">
+  <div id="thirdsDiv" className="sectionDiv">
     <div className="container">
       
       <div className="row">
         <div className="col-sm-4 col-md-4 col-lg-4">
-          <img className="triImage center-block" alt="featureImage" src="http://lorempixel.com/150/150/sports" />
+          <img className="triImage center-block" alt="featureImage" src="./images/signup.png" />
         </div>
         <div className="col-sm-4 col-md-4 col-lg-4">
-          <img alt="featureImage" className="triImage center-block" src="http://lorempixel.com/150/150/cats" />
+          <img alt="featureImage" className="triImage center-block" src="./images/reviews.png" />
         </div>
         <div className="col-sm-4 col-md-4 col-lg-4">
-          <img alt="featureImage" className="triImage center-block" src="http://lorempixel.com/150/150/" />
+          <img alt="featureImage" className="triImage center-block" src="./images/challenger.png" />
         </div>
       </div>
 
