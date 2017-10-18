@@ -1,8 +1,12 @@
 {
-  "main.css": "static/css/main.86edaf0b.css",
-  "main.css.map": "static/css/main.86edaf0b.css.map",
-  "main.js": "static/js/main.98caa49c.js",
-  "main.js.map": "static/js/main.98caa49c.js.map",
+  "main.css": "static/css/main.e31dd25c.css",
+  "main.css.map": "static/css/main.e31dd25c.css.map",
+  "main.js": "static/js/main.1052e478.js",
+  "main.js.map": "static/js/main.1052e478.js.map",
+  "static/media/jumbo.jpg": "static/media/jumbo.2356ac15.jpg",
+  "static/media/leagueCast.jpg": "static/media/leagueCast.065ec764.jpg",
+  "static/media/lolCast.jpg": "static/media/lolCast.b7359031.jpg",
+  "static/media/lolbg.jpg": "static/media/lolbg.a704437e.jpg",
   "static/media/vod-background.jpg": "static/media/vod-background.a149e515.jpg",
   "static/media/vod-background2.jpg": "static/media/vod-background2.884d8022.jpg",
   "static/media/vod-background3.jpg": "static/media/vod-background3.9f720e5a.jpg"

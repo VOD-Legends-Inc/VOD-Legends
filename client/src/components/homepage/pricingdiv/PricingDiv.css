@@ -4,8 +4,10 @@
 }
 
 .sectionDiv{
+
 	border-top: solid 1px lightgrey;
 }
+
 
 #pricingDiv h3{
 	border: solid 1px black;
@@ -20,3 +22,35 @@
 	background-color: grey;
 	border-bottom: solid 1px black;
 }
+
+.hundred{
+	margin-top: 35px;
+	width: 85%;
+	height: 85%;
+	border: solid 3px black;
+}
+.size5{
+	background-image: url("lolbg.jpg");
+	background-position: 0% 25%;
+    background-size: cover;
+    background-repeat: no-repeat;
+	width: 100%;
+	height: 100%;
+	padding-top: 16px;
+	margin-bottom: 0px;
+}
+.ten{
+	border: solid 3px black;
+}
+/* .ten{
+	background-image: url("frame.jpg");
+	background-position: 0% 25%;
+    background-size: cover;
+    background-repeat: no-repeat;
+	width: 100%;
+	height: 100%;
+	padding-top: 16px;
+	margin-bottom: 0px;
+} */
+
+

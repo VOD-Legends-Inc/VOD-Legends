@@ -1,5 +1,10 @@
 /* JUMBOTRON & HEADER SECTION */
 .jumbotron{
+	margin-bottom: 0px;
+    background-image: url(jumbo.jpg);
+    background-position: 0% 25%;
+    background-size: cover;
+    background-repeat: no-repeat;
 	width: 100%;
 	padding-top: 16px;
 	margin-bottom: 0px;
@@ -24,4 +29,13 @@
 .navbar{
 	background-color: transparent;
 	border: none;
+}
+.textwhite{
+	color: white !important;
+}
+.textyellow{
+	color: yellow !important;
+}
+.textborder{
+	text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
 }

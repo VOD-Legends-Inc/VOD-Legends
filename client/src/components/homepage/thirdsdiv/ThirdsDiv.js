@@ -13,7 +13,11 @@ const ThirdsDiv = () => (
           <img alt="featureImage" className="triImage center-block" src="./images/reviews.png" />
         </div>
         <div className="col-sm-4 col-md-4 col-lg-4">
+
           <img alt="featureImage" className="triImage center-block" src="./images/challenger.png" />
+
+          <img alt="featureImage" className="triImage2 center-block" src="./images/challenger.png" />
+
         </div>
       </div>
 

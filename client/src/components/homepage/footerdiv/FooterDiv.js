@@ -20,12 +20,19 @@ const FooterDiv = () => (
 	        </ul>  
 	      </div>
 
+  <div className="sectionDiv">
+    <div className="container-fluid">
+    	<img src="./images/vodsym1.png" alt="logoImage" />
+    	<img className="size4" src="./images/vodsocial.jpg" alt="socialImage" />
+    	<p className="text-center">Contact | About</p>
+    </div>
+
 	      <div id="homeCopyright">
 			    <p>© 2017 vodLEGENDS</p>
 	      </div>
 
 	    </div>
-    
+    </div>
     </div>
   </div>
 );

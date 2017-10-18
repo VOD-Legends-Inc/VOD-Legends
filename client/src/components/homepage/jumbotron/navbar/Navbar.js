@@ -31,13 +31,13 @@ class Navbar extends Component {
               
                   <div className="col-sm-6 col-md-6 col-lg-6">
                       <div className='navbar-header brand-name'>
-                        <img src="./images/vodlg.png" alt="logoImage" />
+                        <img src="./images/vodsym1.png" alt="logoImage" />
                       </div>
                   </div>
 
                     <div className="col-sm-6 col-md-6 col-lg-6">
                         <ul className="nav navbar-nav navbar-right">
-                            
+                            <img src="signupButton" id="signupModalButton" onClick={this.signupClick} />
                             <li>
 
                                 <a href="/coachSignup">
@@ -51,6 +51,11 @@ class Navbar extends Component {
                                 <a href="/studentSignup">
                                     <button id="signupModalButton" className="btn btn-primary" onClick={this.signupClick}>Sign Up</button>
                                 </a>
+
+
+                                <button id="signupModalButton" onClick={this.signupClick}>Sign Up</button>
+                                {/*<img src="signupButton" id="signupModalButton" onClick={this.signupClick} />*/}
+
                                 
 
                             </li>

@@ -1,4 +1,5 @@
 .sectionDiv{
+
 	border-top: solid 1px lightgrey;
 }
 
@@ -49,4 +50,10 @@
 
 #homeCopyright p{
 	color: white;
+
+	border-top: solid 1px #9494b8;
+}
+.size4 {
+	align-content: right;
+
 }

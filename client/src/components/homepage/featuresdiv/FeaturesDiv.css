@@ -1,3 +1,4 @@
+
 .sectionDiv{
 	border-top: solid 1px lightgrey;
 }
@@ -7,4 +8,23 @@
 	height: 420px;	
 	border-top: solid 1px black;
 	border-bottom: solid 1px black;
+}
+.sectionDiv2{
+    background-image: url(lolCast.jpg);
+    background-position: 0% 25%;
+    background-size: cover;
+    background-repeat: no-repeat;
+	width: 100%;
+	height: 100%;
+	padding-top: 16px;
+	margin-bottom: 0px;
+}
+
+.size2{
+	height: 50%;
+	width: 50%;
+}
+
+.triImage{
+	
 }
