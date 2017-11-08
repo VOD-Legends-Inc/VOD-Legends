@@ -16,7 +16,6 @@ const ThirdsDiv = () => (
 
           <img alt="featureImage" className="triImage center-block" src="./images/challenger.png" />
 
-          <img alt="featureImage" className="triImage2 center-block" src="./images/challenger.png" />
 
         </div>
       </div>
